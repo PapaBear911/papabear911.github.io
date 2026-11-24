@@ -1,276 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ver Sangil — Software Engineering, Healthcare IT, Full-Stack Development, AI Engineering">
-    <title>Ver Sangil</title>
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/108722772?v=4" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ver Sangil — Healthcare IT, full-stack &amp; AI engineering</title>
+<meta name="description" content="Ver Sangil (PapaBear911). Healthcare systems, .NET/Angular full-stack, SQL Server, and AI engineering: evidence-driven agents that verify before they claim done.">
+<meta name="color-scheme" content="light dark">
+<script>document.documentElement.classList.add('js');</script>
+<meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://papabear911.github.io/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Ver Sangil">
+<meta property="og:description" content="Healthcare IT, full-stack .NET/Angular, SQL Server, and AI engineering. Audit, act, verify.">
+<meta property="og:url" content="https://papabear911.github.io/">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/108722772?v=4">
+<meta property="og:image:alt" content="Ver's GitHub avatar">
+<meta property="profile:first_name" content="Ver">
+<meta property="profile:username" content="PapaBear911">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ver Sangil">
+<meta name="twitter:description" content="Healthcare IT, full-stack .NET/Angular, SQL Server, and AI engineering. Audit, act, verify.">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/108722772?v=4">
+
+<style>
+  :root {
+    --bg: #fbfbfd;
+    --surface: #ffffff;
+    --text: #14161c;
+    --muted: #565e6e;
+    --line: #dfe3ea;
+    --accent: #1d55e6;
+    --accent-2: #b45309;
+    --accent-soft: #e8efff;
+    --shadow: 0 1px 2px rgb(16 24 40 / 6%), 0 12px 32px -12px rgb(16 24 40 / 18%);
+
+    --step--2: clamp(0.78rem, 0.77rem + 0.05vw, 0.82rem);
+    --step--1: clamp(0.88rem, 0.86rem + 0.1vw, 0.95rem);
+    --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.12rem);
+    --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+    --step-2: clamp(1.5rem, 1.25rem + 1.2vw, 2.1rem);
+    --step-3: clamp(2rem, 1.4rem + 3vw, 3.6rem);
+    --fluid-gap: clamp(1rem, 0.5rem + 2vw, 2rem);
+    --measure: 68ch;
+    --radius: 14px;
+    --ease-out: cubic-bezier(.22, 1, .36, 1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0d12;
+      --surface: #12151d;
+      --text: #eef1f7;
+      --muted: #a3adc0;
+      --line: #262c3a;
+      --accent: #7aa2ff;
+      --accent-2: #f59e0b;
+      --accent-soft: #18213a;
+      --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 16px 40px -16px rgb(0 0 0 / 60%);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0b0d12;
+    --surface: #12151d;
+    --text: #eef1f7;
+    --muted: #a3adc0;
+    --line: #262c3a;
+    --accent: #7aa2ff;
+    --accent-2: #f59e0b;
+    --accent-soft: #18213a;
+    --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 16px 40px -16px rgb(0 0 0 / 60%);
+  }
+
+  :root[data-theme="light"] {
+    --bg: #fbfbfd;
+    --surface: #ffffff;
+    --text: #14161c;
+    --muted: #565e6e;
+    --line: #dfe3ea;
+    --accent: #1d55e6;
+    --accent-2: #b45309;
+    --accent-soft: #e8efff;
+    --shadow: 0 1px 2px rgb(16 24 40 / 6%), 0 12px 32px -12px rgb(16 24 40 / 18%);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: var(--step-0)/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, svg { display: block; max-width: 100%; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+  .skip {
+    position: absolute; left: -999px; top: 0; z-index: 100;
+    background: var(--surface); color: var(--text); padding: .75rem 1rem;
+    border: 1px solid var(--line); border-radius: 0 0 var(--radius) 0;
+  }
+  .skip:focus { left: 0; }
+
+  .wrap { width: min(1120px, 100% - 2 * var(--fluid-gap)); margin-inline: auto; }
+
+  /* ---------- header ---------- */
+  .site-header {
+    position: sticky; top: 0; z-index: 20;
+    backdrop-filter: blur(12px);
+    background: color-mix(in oklab, var(--bg) 82%, transparent);
+    border-bottom: 1px solid color-mix(in oklab, var(--line) 60%, transparent);
+  }
+  .site-header .wrap {
+    display: flex; align-items: center; gap: 1rem;
+    padding-block: .7rem;
+  }
+  .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 650; color: var(--text); text-decoration: none; letter-spacing: -.01em; }
+  .brand svg { width: 26px; height: 26px; flex: none; }
+  .brand path {
+    stroke-dasharray: 120; stroke-dashoffset: 120;
+    animation: draw 1.2s var(--ease-out) .15s forwards;
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+
+  .nav { margin-left: auto; display: flex; align-items: center; gap: .25rem; }
+  .nav a {
+    color: var(--muted); text-decoration: none; font-size: var(--step--1);
+    padding: .45rem .7rem; border-radius: 999px;
+    transition: color .18s ease, background-color .18s ease;
+  }
+  .nav a:hover { color: var(--text); background: var(--accent-soft); }
+  .nav-cta { color: var(--text); border: 1px solid var(--line); }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .94em; background: var(--accent-soft); color: var(--text);
+    padding: .1em .35em; border-radius: 5px; font-synthesis: none;
+  }
+
+  .theme-toggle {
+    display: inline-grid; place-items: center; width: 2.2rem; height: 2.2rem;
+    margin-left: .25rem; border: 1px solid var(--line); border-radius: 999px;
+    background: var(--surface); color: var(--text); cursor: pointer;
+    transition: transform .25s var(--ease-out), background-color .18s ease;
+  }
+  .theme-toggle:hover { transform: rotate(-12deg) scale(1.05); }
+  .theme-toggle svg { width: 15px; height: 15px; }
+
+  @media (max-width: 40rem) { .nav a:not(.nav-cta) { display: none; } }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative; isolation: isolate; overflow: clip;
+    padding-block: clamp(3.5rem, 8vw, 7rem) clamp(2.5rem, 6vw, 4.5rem);
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: -20% -10% auto;
+    height: 70%; z-index: -1;
+    background: radial-gradient(60% 60% at 30% 20%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 70%),
+                radial-gradient(50% 50% at 80% 0%, color-mix(in oklab, #f59e0b 14%, transparent), transparent 70%);
+    filter: blur(8px);
+    opacity: 0; animation: fade-in 1.4s ease .1s forwards;
+  }
+  @keyframes fade-in { to { opacity: 1; } }
+
+  .hero-grid { display: grid; gap: clamp(1.75rem, 4vw, 3.5rem); align-items: center; }
+  @media (min-width: 56rem) { .hero-grid { grid-template-columns: 1.35fr .65fr; } }
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: var(--step-3); line-height: 1.05; letter-spacing: -.03em;
+    font-weight: 720; text-wrap: balance;
+  }
+  h1 .grad {
+    background: linear-gradient(100deg, var(--accent), var(--accent-2) 90%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .lede { margin: 0 0 1.75rem; font-size: var(--step-1); color: var(--muted); max-width: var(--measure); text-wrap: pretty; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .72rem 1.15rem; border-radius: 999px; font-size: var(--step--1); font-weight: 600;
+    text-decoration: none; border: 1px solid transparent;
+    transition: transform .18s var(--ease-out), box-shadow .18s ease, background-color .18s ease;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  @media (prefers-color-scheme: dark) { .btn-primary { color: #0b0d12; } }
+  :root[data-theme="dark"] .btn-primary { color: #0b0d12; }
+  :root[data-theme="light"] .btn-primary { color: #fff; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px color-mix(in oklab, var(--accent) 80%, transparent); }
+  .btn-ghost { background: transparent; border-color: var(--line); color: var(--text); }
+  .btn-ghost:hover { background: var(--surface); transform: translateY(-2px); }
+  .btn svg { width: 15px; height: 15px; }
+  .btn-primary svg { animation: nudge 2.4s var(--ease-out) infinite; }
+  @keyframes nudge { 0%, 70%, 100% { transform: translateX(0); } 80% { transform: translateX(3px); } }
+
+  .avatar-card {
+    position: relative; isolation: isolate; justify-self: center;
+    width: min(260px, 62vw); aspect-ratio: 1;
+    border-radius: 50%; padding: .5rem;
+  }
+  .avatar-card::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 50%;
+    background: conic-gradient(from 0deg, var(--accent), var(--accent-2), var(--accent));
+    animation: spin-border 9s linear infinite;
+  }
+  .avatar-card img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: var(--surface); }
+  @keyframes spin-border { to { transform: rotate(360deg); } }
+  .avatar-card:hover::before { animation-play-state: paused; }
+
+  /* ---------- sections ---------- */
+  section { padding-block: clamp(2.75rem, 6vw, 5rem); }
+  .section-head { max-width: var(--measure); margin-bottom: clamp(1.5rem, 3vw, 2.25rem); }
+  h2 { margin: 0 0 .5rem; font-size: var(--step-2); letter-spacing: -.02em; line-height: 1.15; text-wrap: balance; }
+  h3 { line-height: 1.25; text-wrap: balance; }
+  .section-head p { margin: 0; color: var(--muted); }
+
+  .cards { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
+
+  .card {
+    container-type: inline-size;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: clamp(1.1rem, 3cqi, 1.6rem); box-shadow: var(--shadow);
+    transition: transform .22s var(--ease-out), border-color .22s ease;
+  }
+  .card:hover { transform: translateY(-4px); border-color: color-mix(in oklab, var(--accent) 45%, var(--line)); }
+  .card h3 { margin: 0 0 .45rem; font-size: var(--step-1); letter-spacing: -.01em; }
+  .card p { margin: 0 0 1rem; color: var(--muted); font-size: var(--step--1); }
+  .meta { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; color: var(--muted); font-size: var(--step--2); }
+  .tag {
+    border: 1px solid var(--line); border-radius: 999px; padding: .2rem .6rem;
+    background: var(--bg); letter-spacing: .01em; line-height: 1.4;
+  }
+  @container (min-width: 26rem) { .card { padding: 1.75rem; } }
+
+  .work-list { display: grid; gap: 1.1rem; }
+  .work-item {
+    display: grid; gap: .75rem; text-decoration: none; color: inherit;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: clamp(1.1rem, 2.5vw, 1.6rem); box-shadow: var(--shadow);
+    transition: transform .22s var(--ease-out), border-color .22s ease;
+  }
+  a.work-item:hover { transform: translateY(-3px); border-color: color-mix(in oklab, var(--accent) 45%, var(--line)); }
+  .work-item h3 { margin: 0; font-size: var(--step-1); display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+  .work-item p { margin: 0; color: var(--muted); font-size: var(--step--1); max-width: var(--measure); }
+  .work-item .stars { font-size: var(--step--2); color: var(--muted); font-weight: 500; line-height: 1.4; }
+
+  .stack-grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
+  .stack-group {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.2rem; box-shadow: var(--shadow);
+  }
+  .stack-group h3 { margin: 0 0 .6rem; font-size: var(--step-0); letter-spacing: -.01em; }
+  .stack-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
+  .stack-list li { color: var(--muted); font-size: var(--step--1); padding-left: .85rem; position: relative; }
+  .stack-list li::before {
+    content: ""; position: absolute; left: 0; top: .65em;
+    width: .3rem; height: .3rem; border-radius: 50%; background: var(--accent);
+  }
+
+  .split { display: grid; gap: clamp(1.75rem, 4vw, 3rem); }
+  @media (min-width: 52rem) { .split { grid-template-columns: 1fr 1fr; } }
+
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); gap: 1rem; }
+  .fact { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem; background: var(--surface); }
+  .fact b { display: block; font-size: var(--step-2); letter-spacing: -.02em; line-height: 1.1; }
+  .fact span { color: var(--muted); font-size: var(--step--1); }
+
+  .contact { text-align: center; }
+  .contact h2 { margin-bottom: .75rem; }
+  .contact p { margin: 0 auto 1.75rem; color: var(--muted); max-width: 46ch; }
+
+  footer {
+    border-top: 1px solid var(--line); margin-top: clamp(3rem, 6vw, 5rem);
+    padding-block: 2rem; color: var(--muted); font-size: var(--step--1);
+  }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; align-items: center; justify-content: space-between; }
+  footer nav { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+  footer a { color: var(--muted); display: inline-flex; align-items: center; min-height: 2.75rem; }
+  footer a:hover { color: var(--text); }
+
+  /* ---------- reveal (IntersectionObserver) ---------- */
+  .reveal { transition: opacity .7s var(--ease-out), transform .7s var(--ease-out); }
+  .js .reveal { opacity: 0; transform: translateY(18px); }
+  .js .reveal.is-visible { opacity: 1; transform: none; }
+
+  /* stagger children of a revealed group */
+  .reveal.is-visible .stagger > * { animation: rise .6s var(--ease-out) backwards; }
+  .reveal.is-visible .stagger > *:nth-child(1) { animation-delay: .05s; }
+  .reveal.is-visible .stagger > *:nth-child(2) { animation-delay: .12s; }
+  .reveal.is-visible .stagger > *:nth-child(3) { animation-delay: .19s; }
+  .reveal.is-visible .stagger > *:nth-child(4) { animation-delay: .26s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .avatar-card { animation: none; background: var(--accent); }
+    .avatar-card::before { animation: none; background: var(--accent); }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
 </head>
 <body>
-  <div class="watermark" aria-hidden="true"></div>
-  <a href="#main" class="skip-link">Skip to content</a>
 
-  <nav class="nav" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a class="nav-logo" href="#main">VSS</a>
-      <ul class="nav-links" role="list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#expertise">Expertise</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#stack">Stack</a></li>
-        <li><a href="https://github.com/PapaBear911" target="_blank" rel="noopener noreferrer">GitHub <span class="sr-only">(opens in new tab)</span></a></li>
-      </ul>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ver — home">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+        <path d="M4 5.5 12 19l8-13.5M8 5.5l4 7 4-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Ver</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#stack">Stack</a>
+      <a href="#work">Work</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+      <button class="theme-toggle" type="button" id="themeToggle" aria-label="Switch color theme" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6l1.4 1.4m10 10 1.4 1.4m0-12.8-1.4 1.4m-10 10-1.4 1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 id="hero-title">Healthcare systems that <span class="grad">survive contact</span> with production.</h1>
+        <p class="lede">Hi, I’m <strong>Ver Sangil</strong> — PapaBear911 online. I build hospital information systems, .NET and Angular line-of-business apps, SQL Server data layers, and AI agents that have to show evidence before they claim done.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#work">
+            See the work
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/PapaBear911" rel="me noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.88 1.52 2.31 1.08 2.87.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="avatar-card">
+        <img src="https://avatars.githubusercontent.com/u/108722772?v=4" width="460" height="460" alt="Portrait avatar of Ver (PapaBear)" decoding="async" fetchpriority="high">
+      </div>
     </div>
-  </nav>
+  </section>
 
-  <main id="main">
-    <header class="hero">
-      <div class="parallax-layer" data-speed="0.15" aria-hidden="true"></div>
-      <div class="parallax-layer" data-speed="0.35" aria-hidden="true"></div>
-      <div class="parallax-layer" data-speed="0.55" aria-hidden="true"></div>
-      <div class="hero-inner reveal">
-        <div class="hero-eyebrow">Software Engineering · Healthcare IT · AI Engineering</div>
-        <h1>Ver Sangil</h1>
-        <p class="hero-sub">Building enterprise healthcare systems, full-stack applications, and autonomous AI engineering workflows. Focused on audit-first debugging, minimal safe fixes, and knowledge that compounds.</p>
-        <div class="hero-actions">
-          <a href="#expertise" class="btn btn-primary">Explore Expertise</a>
-          <a href="https://github.com/PapaBear911" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub Profile</a>
+  <section id="about" aria-labelledby="about-title">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 id="about-title">Short version</h2>
+        <p>I care about the gap between “it runs on my machine” and “someone else can verify it shipped.”</p>
+      </div>
+      <div class="split">
+        <div>
+          <p>Hands-on work across hospital information systems, EMR/EHR and PhilHealth eClaims, .NET and Angular enterprise apps, SQL Server performance, and release branches that have to reconcile across sites. Regulated users, real audit trails, no room for “it should work.”</p>
+          <p>That pushed me toward boring, durable choices — inspect before guessing, fix the root cause, then verify. My AI agents follow the same rule: audit, act, verify, then repeat.</p>
+        </div>
+        <div class="facts stagger">
+          <div class="fact"><b>4</b><span>years on GitHub</span></div>
+          <div class="fact"><b>31</b><span>repos and counting</span></div>
+          <div class="fact"><b>0</b><span>runtime deps in VER</span></div>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <section id="about" class="section section--about">
-      <div class="container">
-        <div class="profile-card">
-          <div class="profile-image">
-            <img src="https://avatars.githubusercontent.com/u/108722772?v=4" alt="Ver Sangil — profile photo" loading="eager" width="160" height="160">
-          </div>
-          <div class="profile-content">
-            <h2>About</h2>
-            <p>A hands-on technology professional combining healthcare information systems, full-stack software engineering, database administration, enterprise system implementation, and AI-powered engineering automation.</p>
-            <p>Long-term focus: building intelligent, reliable, and increasingly autonomous software engineering systems that blend traditional engineering discipline with modern AI capabilities.</p>
-            <blockquote cite="#philosophy">
-              <p>Don't guess. Inspect. Identify and fix the root cause. Verify actual results before declaring completion.</p>
-            </blockquote>
-          </div>
+  <section id="expertise" aria-labelledby="expertise-title">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 id="expertise-title">Expertise</h2>
+        <p>Where the work actually happens — regulated systems, enterprise backends, and agents that have to prove themselves.</p>
+      </div>
+      <div class="cards stagger">
+        <article class="card">
+          <h3>Healthcare IT</h3>
+          <p>Hospital information systems, EMR/EHR, PhilHealth eClaims, workflow automation, and regulatory compliance reporting.</p>
+          <div class="meta"><span class="tag">HIS</span><span class="tag">EMR/EHR</span><span class="tag">Compliance</span></div>
+        </article>
+        <article class="card">
+          <h3>Full-stack .NET</h3>
+          <p>C# and ASP.NET Web API backends with Angular frontends. REST design, enterprise architecture, legacy modernization.</p>
+          <div class="meta"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">Angular</span></div>
+        </article>
+        <article class="card">
+          <h3>Data engineering</h3>
+          <p>SQL Server 2014 and 2022, T-SQL, stored procedures, query plans, index analysis, and custom migration systems.</p>
+          <div class="meta"><span class="tag">T-SQL</span><span class="tag">Indexes</span><span class="tag">Migrations</span></div>
+        </article>
+        <article class="card">
+          <h3>AI engineering</h3>
+          <p>MCP, multi-agent orchestration, RAG over repos and docs, local models, and automated code auditing with evidence gates.</p>
+          <div class="meta"><span class="tag">MCP</span><span class="tag">RAG</span><span class="tag">Agents</span></div>
+        </article>
+        <article class="card">
+          <h3>Infrastructure</h3>
+          <p>Windows Server, IIS, Azure Blob Storage, Git workflows, ClickOnce deployment, and production or QA troubleshooting.</p>
+          <div class="meta"><span class="tag">IIS</span><span class="tag">Azure</span><span class="tag">Git</span></div>
+        </article>
+        <article class="card">
+          <h3>Release discipline</h3>
+          <p>Cross-branch reconciliation, release management, and checks that fail loudly instead of quietly shipping a regression.</p>
+          <div class="meta"><span class="tag">Release mgmt</span><span class="tag">Verification</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-title">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 id="work-title">Selected work</h2>
+        <p>Public repos you can read in one sitting, plus the systems I run at work.</p>
+      </div>
+      <div class="work-list stagger">
+        <a class="work-item" href="https://github.com/PapaBear911/VER" rel="noopener">
+          <h3>VER — Visualize · Engineer · Release <span class="stars">Public · MIT</span></h3>
+          <p>A three-phase agent loop with hard evidence gates, delivered as one <code>AGENTS.md</code> plus an installer CLI with zero third-party runtime dependencies.</p>
+          <div class="meta"><span class="tag">JavaScript</span><span class="tag">Agent workflow</span><span class="tag">Node 18+</span></div>
+        </a>
+        <a class="work-item" href="https://github.com/PapaBear911/OpenTeamQueue" rel="noopener">
+          <h3>OpenTeamQueue <span class="stars">Public</span></h3>
+          <p>Zero-build queue randomizer, live scoreboard, and tournament manager for badminton, pickleball, and tennis. Single-file, offline-first, state in <code>localStorage</code>.</p>
+          <div class="meta"><span class="tag">HTML</span><span class="tag">Vanilla JS</span><span class="tag">Offline</span></div>
+        </a>
+        <article class="work-item">
+          <h3>MEDIX-MCP <span class="stars">Work · Featured</span></h3>
+          <p>A headless engineering knowledge and repository intelligence platform connecting AI agents to source code, SQL databases, Git repos, and technical documentation.</p>
+          <div class="meta"><span class="tag">MCP</span><span class="tag">Repository intelligence</span><span class="tag">AI agents</span></div>
+        </article>
+        <article class="work-item">
+          <h3>SENTINEL <span class="stars">Work</span></h3>
+          <p>Evidence-driven engineering audit and verification agent: investigate the issue, find the root cause, apply the smallest safe correction, then verify the result.</p>
+          <div class="meta"><span class="tag">Multi-agent</span><span class="tag">RAG</span><span class="tag">Code auditing</span></div>
+        </article>
+        <article class="work-item">
+          <h3>HIS modernization <span class="stars">Work</span></h3>
+          <p>Reconciling legacy Medix applications with the unified HIS2 architecture — backend, frontend, database, and release-branch consistency across sites.</p>
+          <div class="meta"><span class="tag">SQL Server</span><span class="tag">.NET</span><span class="tag">Angular</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack" aria-labelledby="stack-title">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 id="stack-title">Technology stack</h2>
+        <p>Tools I have shipped with, not a logo wall.</p>
+      </div>
+      <div class="stack-grid stagger">
+        <div class="stack-group">
+          <h3>Backend</h3>
+          <ul class="stack-list">
+            <li>C#</li>
+            <li>.NET / ASP.NET</li>
+            <li>ASP.NET Web API</li>
+            <li>RESTful APIs</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Frontend</h3>
+          <ul class="stack-list">
+            <li>Angular</li>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>HTML5 / CSS</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Data</h3>
+          <ul class="stack-list">
+            <li>SQL Server 2014</li>
+            <li>SQL Server 2022</li>
+            <li>T-SQL</li>
+            <li>Query optimization</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>AI and ops</h3>
+          <ul class="stack-list">
+            <li>MCP / RAG</li>
+            <li>Ollama, Qwen, Llama</li>
+            <li>Git / PowerShell</li>
+            <li>Windows Server / IIS</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="expertise" class="section section--expertise">
-      <div class="container">
-        <h2 class="reveal">Expertise</h2>
-          <div class="expertise-grid reveal-group">
-          <article class="expertise-card reveal">
-            <div class="expertise-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M3 12h18"/><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M8 5V3"/><path d="M16 5V3"/><path d="M8 21v-2"/><path d="M16 21v-2"/></svg>
-            </div>
-            <h3>Healthcare IT</h3>
-            <p>Hospital information systems, EMR/EHR, PhilHealth eClaims, healthcare workflow automation, and regulatory compliance reporting.</p>
-          </article>
-          <article class="expertise-card reveal">
-            <div class="expertise-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <h3>Full-Stack Development</h3>
-            <p>C# / .NET / ASP.NET Web API backends with Angular frontends. RESTful APIs, enterprise architecture, legacy modernization.</p>
-          </article>
-          <article class="expertise-card">
-            <div class="expertise-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-            </div>
-            <h3>Database Engineering</h3>
-            <p>SQL Server 2014/2022, T-SQL, stored procedures, query optimization, index analysis, and custom migration systems.</p>
-          </article>
-          <article class="expertise-card">
-            <div class="expertise-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            </div>
-            <h3>AI Engineering</h3>
-            <p>MCP, multi-agent orchestration, RAG, repository intelligence, local LLMs (Ollama, Qwen Coder, Llama), and automated code auditing.</p>
-          </article>
-          <article class="expertise-card">
-            <div class="expertise-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 8h4"/><path d="M7 12h10"/></svg>
-            </div>
-            <h3>Infrastructure</h3>
-            <p>Windows Server, IIS, Azure Blob Storage, Git, ClickOnce deployment, and production/QA environment troubleshooting.</p>
-          </article>
-          <article class="expertise-card">
-            <div class="expertise-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            </div>
-            <h3>System Implementation</h3>
-            <p>Enterprise application deployment, release management, cross-branch reconciliation, and HIS modernization.</p>
-          </article>
-        </div>
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap reveal">
+      <h2 id="contact-title">Have something that has to work the first time?</h2>
+      <p>Hospital workflows, legacy .NET that needs rescuing, a SQL Server that fell over, or agents that keep lying about being done.</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn btn-primary" href="https://github.com/PapaBear911" rel="me noopener">Find me on GitHub</a>
+        <a class="btn btn-ghost" href="https://github.com/PapaBear911/VER" rel="noopener">Read the VER rules</a>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
 
-    <section id="projects" class="section section--projects">
-      <div class="container">
-        <h2 class="reveal">Projects &amp; Initiatives</h2>
-        <div class="projects-grid reveal-group">
-          <article class="project-card">
-            <div class="project-tag" aria-hidden="true">Featured</div>
-            <h3>MEDIX-MCP</h3>
-            <p>A headless engineering knowledge and repository intelligence platform connecting AI agents with source code, SQL databases, Git repos, and technical documentation.</p>
-            <ul class="project-tech">
-              <li>MCP</li>
-              <li>Repository Intelligence</li>
-              <li>AI Agents</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <div class="project-tag" aria-hidden="true">Healthcare</div>
-            <h3>HIS Modernization</h3>
-            <p>Modernization and reconciliation of legacy Medix applications with the unified HIS2 architecture — backend, frontend, database, and release-branch consistency.</p>
-            <ul class="project-tech">
-              <li>SQL Server</li>
-              <li>.NET</li>
-              <li>Angular</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <div class="project-tag" aria-hidden="true">AI</div>
-            <h3>SENTINEL</h3>
-            <p>Evidence-driven engineering audit and verification agent: investigate issues, identify root causes, apply safe corrections, and verify results.</p>
-            <ul class="project-tech">
-              <li>Multi-Agent</li>
-              <li>RAG</li>
-              <li>Code Auditing</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <div class="project-tag" aria-hidden="true">Concept</div>
-            <h3>VerCoder</h3>
-            <p>Unified AI programming agent combining fast engineering decisions with deeper verification and reasoning for full-stack development.</p>
-            <ul class="project-tech">
-              <li>AI Orchestration</li>
-              <li>Full-Stack</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+<footer>
+  <div class="wrap">
+    <p>© <span id="year">2026</span> Ver Sangil · PapaBear911 — audit, act, persist, repeat.</p>
+    <nav aria-label="Elsewhere">
+      <a href="https://github.com/PapaBear911" rel="me noopener">GitHub</a>
+      <a href="https://github.com/PapaBear911/VER" rel="noopener">VER</a>
+      <a href="#top">Back to top</a>
+    </nav>
+  </div>
+</footer>
 
-    <section id="stack" class="section section--stack">
-      <div class="container">
-        <h2 class="reveal">Technology Stack</h2>
-        <div class="stack-grid reveal-group">
-          <div class="stack-group">
-            <h3>Backend</h3>
-            <ul class="stack-list" role="list">
-              <li>C#</li>
-              <li>.NET / ASP.NET</li>
-              <li>ASP.NET Web API</li>
-              <li>RESTful APIs</li>
-              <li>T-SQL</li>
-            </ul>
-          </div>
-          <div class="stack-group">
-            <h3>Frontend</h3>
-            <ul class="stack-list" role="list">
-              <li>Angular</li>
-              <li>TypeScript</li>
-              <li>JavaScript</li>
-              <li>HTML5</li>
-              <li>CSS</li>
-            </ul>
-          </div>
-          <div class="stack-group">
-            <h3>Database</h3>
-            <ul class="stack-list" role="list">
-              <li>SQL Server 2014</li>
-              <li>SQL Server 2022</li>
-              <li>Stored Procedures</li>
-              <li>Query Optimization</li>
-              <li>Index Analysis</li>
-            </ul>
-          </div>
-          <div class="stack-group">
-            <h3>DevOps & AI</h3>
-            <ul class="stack-list" role="list">
-              <li>Git</li>
-              <li>PowerShell</li>
-              <li>Windows Server</li>
-              <li>Azure Blob Storage</li>
-              <li>Ollama / Qwen / Llama</li>
-              <li>MCP / RAG</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Ver Sangil","alternateName":"PapaBear","url":"https://papabear911.github.io/","image":"https://avatars.githubusercontent.com/u/108722772?v=4","sameAs":["https://github.com/PapaBear911"],"jobTitle":"Software Engineer","knowsAbout":["Healthcare information systems","C# and .NET","Angular","SQL Server","AI agents and MCP","Accessibility"]}
+</script>
 
-  <script>
-    (function () {
-      document.documentElement.classList.add('js');
-      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+<script>
+(() => {
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const KEY = 'theme';
 
-      if (!prefersReduced) {
-        // ── Parallax layers (depth illusion) ─────────────
-        var layers = document.querySelectorAll('.parallax-layer');
-        var ticking = false;
+  const apply = (mode) => {
+    if (mode) root.dataset.theme = mode; else delete root.dataset.theme;
+    toggle.setAttribute('aria-pressed', String(mode === 'dark'));
+  };
 
-        function updateParallax() {
-          var scrollY = window.pageYOffset;
-          layers.forEach(function (layer) {
-            var speed = layer.getAttribute('data-speed') || 0.2;
-            var y = -(scrollY * speed);
-            layer.style.transform = 'translate3d(0, ' + y + 'px, 0)';
-          });
-          ticking = false;
-        }
+  try { apply(localStorage.getItem(KEY)); } catch {}
 
-        window.addEventListener('scroll', function () {
-          if (!ticking) {
-            window.requestAnimationFrame(updateParallax);
-            ticking = true;
-          }
-        });
-        updateParallax();
+  toggle.addEventListener('click', () => {
+    const dark = root.dataset.theme === 'dark'
+      || (!root.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
+    const next = dark ? 'light' : 'dark';
+    apply(next);
+    try { localStorage.setItem(KEY, next); } catch {}
+  });
 
-        // ── Scroll reveal (Intersection Observer) ────────
-        var revealObserver = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-        document.querySelectorAll('.reveal, .section').forEach(function (el) {
-          revealObserver.observe(el);
-        });
+  const items = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    items.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('is-visible');
+      io.unobserve(entry.target);
+    }
+    sweep();
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
 
-        // Stagger children of reveal-groups
-        document.querySelectorAll('.reveal-group').forEach(function (group) {
-          group.querySelectorAll('.reveal').forEach(function (el, i) {
-            el.style.setProperty('--reveal-delay', (i * 0.08) + 's');
-          });
-        });
+  // sections skipped by an anchor jump or a restored scroll position
+  const sweep = () => {
+    for (const el of items) {
+      if (el.classList.contains('is-visible')) continue;
+      if (el.getBoundingClientRect().top < innerHeight) {
+        el.classList.add('is-visible');
+        io.unobserve(el);
       }
-    })();
-  </script>
+    }
+  };
 
-  <footer class="footer">
-    <div class="container">
-      <p>Ver Sangil &middot; PapaBear911</p>
-      <p class="footer-tagline">Audit &rarr; Act &rarr; Persist &rarr; Repeat</p>
-      <nav aria-label="Social links">
-        <ul class="footer-links" role="list">
-          <li><a href="https://github.com/PapaBear911" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+  items.forEach((el) => io.observe(el));
+  sweep();
+  items.forEach((el) => io.observe(el));
+})();
+</script>
 </body>
 </html>

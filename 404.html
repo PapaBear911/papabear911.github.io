@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Ver</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<style>
+  :root { --bg:#fbfbfd; --text:#14161c; --muted:#565e6e; --accent:#2f6dfb; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0b0d12; --text:#eef1f7; --muted:#a3adc0; --accent:#7aa2ff; } }
+  body {
+    margin:0; min-height:100dvh; display:grid; place-content:center; gap:1rem;
+    padding:2rem; text-align:center; background:var(--bg); color:var(--text);
+    font: clamp(1rem, .95rem + .3vw, 1.15rem)/1.6 ui-sans-serif, system-ui, sans-serif;
+  }
+  p { margin:0; color:var(--muted); }
+  h1 { margin:0; font-size:clamp(2.2rem, 1.4rem + 5vw, 4.5rem); letter-spacing:-.03em; line-height:1; }
+  a { color:var(--accent); text-underline-offset:3px; }
+  code { color:var(--muted); }
+</style>
+</head>
+<body>
+  <h1>404</h1>
+  <p>That page moved or never existed. <code id="path"></code></p>
+  <p><a href="/">Back to the start</a></p>
+  <script>document.getElementById('path').textContent = location.pathname;</script>
+</body>
+</html>
