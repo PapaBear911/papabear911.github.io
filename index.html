@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ver â€” PapaBear's Animated Personal Page</title>
+<meta name="description" content="Ver (PapaBear). I build agent workflows, zero-build apps, and developer tooling. VER, OpenTeamQueue, and more.">
+<meta name="color-scheme" content="light dark">
+<script>document.documentElement.classList.add('js');</script>
+<meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://papabear911.github.io/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Ver â€” PapaBear">
+<meta property="og:description" content="I build agent workflows, zero-build apps, and developer tooling.">
+<meta property="og:url" content="https://papabear911.github.io/">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/108722772?v=4">
+<meta property="profile:first_name" content="Ver">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ver â€” PapaBear">
+<meta name="twitter:description" content="I build agent workflows, zero-build apps, and developer tooling.">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/108722772?v=4">
+
+<style>
+  :root {
+    --bg: #fbfbfd;
+    --surface: #ffffff;
+    --text: #14161c;
+    --muted: #565e6e;
+    --line: #dfe3ea;
+    --accent: #1d55e6;
+    --accent-2: #b45309;
+    --accent-soft: #e8efff;
+    --shadow: 0 1px 2px rgb(16 24 40 / 6%), 0 12px 32px -12px rgb(16 24 40 / 18%);
+
+    --step--1: clamp(0.88rem, 0.86rem + 0.1vw, 0.95rem);
+    --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.12rem);
+    --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+    --step-2: clamp(1.5rem, 1.25rem + 1.2vw, 2.1rem);
+    --step-3: clamp(2rem, 1.4rem + 3vw, 3.6rem);
+    --fluid-gap: clamp(1rem, 0.5rem + 2vw, 2rem);
+    --measure: 62ch;
+    --radius: 14px;
+    --ease-out: cubic-bezier(.22, 1, .36, 1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0d12;
+      --surface: #12151d;
+      --text: #eef1f7;
+      --muted: #a3adc0;
+      --line: #262c3a;
+      --accent: #7aa2ff;
+      --accent-2: #f59e0b;
+      --accent-soft: #18213a;
+      --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 16px 40px -16px rgb(0 0 0 / 60%);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0b0d12;
+    --surface: #12151d;
+    --text: #eef1f7;
+    --muted: #a3adc0;
+    --line: #262c3a;
+    --accent: #7aa2ff;
+    --accent-2: #f59e0b;
+    --accent-soft: #18213a;
+    --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 16px 40px -16px rgb(0 0 0 / 60%);
+  }
+
+  :root[data-theme="light"] {
+    --bg: #fbfbfd;
+    --surface: #ffffff;
+    --text: #14161c;
+    --muted: #565e6e;
+    --line: #dfe3ea;
+    --accent: #1d55e6;
+    --accent-2: #b45309;
+    --accent-soft: #e8efff;
+    --shadow: 0 1px 2px rgb(16 24 40 / 6%), 0 12px 32px -12px rgb(16 24 40 / 18%);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: var(--step-0)/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img, svg { display: block; max-width: 100%; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+  .skip {
+    position: absolute; left: -999px; top: 0; z-index: 100;
+    background: var(--surface); color: var(--text); padding: .75rem 1rem;
+    border: 1px solid var(--line); border-radius: 0 0 var(--radius) 0;
+  }
+  .skip:focus { left: 0; }
+
+  .wrap { width: min(1120px, 100% - 2 * var(--fluid-gap)); margin-inline: auto; }
+
+  /* ---------- header ---------- */
+  .site-header {
+    position: sticky; top: 0; z-index: 20;
+    backdrop-filter: blur(12px);
+    background: color-mix(in oklab, var(--bg) 82%, transparent);
+    border-bottom: 1px solid color-mix(in oklab, var(--line) 60%, transparent);
+  }
+  .site-header .wrap {
+    display: flex; align-items: center; gap: 1rem;
+    padding-block: .7rem;
+  }
+  .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 650; color: var(--text); text-decoration: none; letter-spacing: -.01em; }
+  .brand svg { width: 26px; height: 26px; flex: none; }
+  .brand path {
+    stroke-dasharray: 120; stroke-dashoffset: 120;
+    animation: draw 1.2s var(--ease-out) .15s forwards;
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+
+  .nav { margin-left: auto; display: flex; align-items: center; gap: .25rem; }
+  .nav a {
+    color: var(--muted); text-decoration: none; font-size: var(--step--1);
+    padding: .45rem .7rem; border-radius: 999px;
+    transition: color .18s ease, background-color .18s ease;
+  }
+  .nav a:hover { color: var(--text); background: var(--accent-soft); }
+  .nav-cta { color: var(--text); border: 1px solid var(--line); }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .9em; background: var(--accent-soft); color: inherit;
+    padding: .1em .35em; border-radius: 5px;
+  }
+
+  .theme-toggle {
+    display: inline-grid; place-items: center; width: 2.2rem; height: 2.2rem;
+    margin-left: .25rem; border: 1px solid var(--line); border-radius: 999px;
+    background: var(--surface); color: var(--text); cursor: pointer;
+    transition: transform .25s var(--ease-out), background-color .18s ease;
+  }
+  .theme-toggle:hover { transform: rotate(-12deg) scale(1.05); }
+  .theme-toggle svg { width: 15px; height: 15px; }
+
+  @media (max-width: 40rem) { .nav a:not(.nav-cta) { display: none; } }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative; isolation: isolate; overflow: clip;
+    padding-block: clamp(3.5rem, 8vw, 7rem) clamp(2.5rem, 6vw, 4.5rem);
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: -20% -10% auto;
+    height: 70%; z-index: -1;
+    background: radial-gradient(60% 60% at 30% 20%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 70%),
+                radial-gradient(50% 50% at 80% 0%, color-mix(in oklab, #f59e0b 14%, transparent), transparent 70%);
+    filter: blur(8px);
+    opacity: 0; animation: fade-in 1.4s ease .1s forwards;
+  }
+  @keyframes fade-in { to { opacity: 1; } }
+
+  .hero-grid { display: grid; gap: clamp(1.75rem, 4vw, 3.5rem); align-items: center; }
+  @media (min-width: 56rem) { .hero-grid { grid-template-columns: 1.35fr .65fr; } }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-size: var(--step--1); font-weight: 600; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--muted); margin: 0 0 1rem;
+  }
+  .eyebrow::before {
+    content: ""; width: .5rem; height: .5rem; border-radius: 50%;
+    background: #22c55e; box-shadow: 0 0 0 4px color-mix(in oklab, #22c55e 22%, transparent);
+    animation: pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse { 50% { box-shadow: 0 0 0 8px color-mix(in oklab, #22c55e 0%, transparent); } }
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: var(--step-3); line-height: 1.05; letter-spacing: -.03em;
+    font-weight: 720; text-wrap: balance;
+  }
+  h1 .grad {
+    background: linear-gradient(100deg, var(--accent), var(--accent-2) 90%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .lede { margin: 0 0 1.75rem; font-size: var(--step-1); color: var(--muted); max-width: var(--measure); text-wrap: pretty; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .72rem 1.15rem; border-radius: 999px; font-size: var(--step--1); font-weight: 600;
+    text-decoration: none; border: 1px solid transparent;
+    transition: transform .18s var(--ease-out), box-shadow .18s ease, background-color .18s ease;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  @media (prefers-color-scheme: dark) { .btn-primary { color: #0b0d12; } }
+  :root[data-theme="dark"] .btn-primary { color: #0b0d12; }
+  :root[data-theme="light"] .btn-primary { color: #fff; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px color-mix(in oklab, var(--accent) 80%, transparent); }
+  .btn-ghost { background: transparent; border-color: var(--line); color: var(--text); }
+  .btn-ghost:hover { background: var(--surface); transform: translateY(-2px); }
+  .btn svg { width: 15px; height: 15px; }
+  .btn-primary svg { animation: nudge 2.4s var(--ease-out) infinite; }
+  @keyframes nudge { 0%, 70%, 100% { transform: translateX(0); } 80% { transform: translateX(3px); } }
+
+  .avatar-card {
+    position: relative; isolation: isolate; justify-self: center;
+    width: min(260px, 62vw); aspect-ratio: 1;
+    border-radius: 50%; padding: .5rem;
+  }
+  .avatar-card::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 50%;
+    background: conic-gradient(from 0deg, var(--accent), var(--accent-2), var(--accent));
+    animation: spin-border 9s linear infinite;
+  }
+  .avatar-card img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: var(--surface); }
+  @keyframes spin-border { to { transform: rotate(360deg); } }
+  .avatar-card:hover::before { animation-play-state: paused; }
+
+  /* ---------- sections ---------- */
+  section { padding-block: clamp(2.75rem, 6vw, 5rem); }
+  .section-head { max-width: var(--measure); margin-bottom: clamp(1.5rem, 3vw, 2.25rem); }
+  h2 { margin: 0 0 .5rem; font-size: var(--step-2); letter-spacing: -.02em; line-height: 1.15; text-wrap: balance; }
+  .section-head p { margin: 0; color: var(--muted); }
+
+  .cards { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
+
+  .card {
+    container-type: inline-size;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: clamp(1.1rem, 3cqi, 1.6rem); box-shadow: var(--shadow);
+    transition: transform .22s var(--ease-out), border-color .22s ease;
+  }
+  .card:hover { transform: translateY(-4px); border-color: color-mix(in oklab, var(--accent) 45%, var(--line)); }
+  .card h3 { margin: 0 0 .4rem; font-size: var(--step-1); letter-spacing: -.01em; }
+  .card p { margin: 0 0 1rem; color: var(--muted); font-size: var(--step--1); }
+  .card .meta { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; font-size: .78rem; color: var(--muted); }
+  .tag {
+    border: 1px solid var(--line); border-radius: 999px; padding: .15rem .55rem;
+    background: var(--bg); font-size: .75rem; letter-spacing: .01em;
+  }
+  .card-icon { width: 2.35rem; height: 2.35rem; border-radius: 10px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); margin-bottom: 1rem; }
+  .card-icon svg { width: 1.15rem; height: 1.15rem; }
+  @container (min-width: 26rem) { .card { padding: 1.75rem; } }
+
+  .work-list { display: grid; gap: 1.1rem; }
+  .work-item {
+    display: grid; gap: .75rem; text-decoration: none; color: inherit;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: clamp(1.1rem, 2.5vw, 1.6rem); box-shadow: var(--shadow);
+    transition: transform .22s var(--ease-out), border-color .22s ease;
+  }
+  .work-item:hover { transform: translateY(-3px); border-color: color-mix(in oklab, var(--accent) 45%, var(--line)); }
+  .work-item h3 { margin: 0; font-size: var(--step-1); display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+  .work-item p { margin: 0; color: var(--muted); max-width: 68ch; }
+  .work-item .stars { font-size: .78rem; color: var(--muted); font-weight: 500; }
+
+  .split { display: grid; gap: clamp(1.75rem, 4vw, 3rem); }
+  @media (min-width: 52rem) { .split { grid-template-columns: 1fr 1fr; } }
+
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); gap: 1rem; }
+  .fact { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem; background: var(--surface); }
+  .fact b { display: block; font-size: var(--step-2); letter-spacing: -.02em; line-height: 1.1; }
+  .fact span { color: var(--muted); font-size: var(--step--1); }
+
+  .contact { text-align: center; }
+  .contact h2 { margin-bottom: .75rem; }
+  .contact p { margin: 0 auto 1.75rem; color: var(--muted); max-width: 46ch; }
+
+  footer {
+    border-top: 1px solid var(--line); margin-top: clamp(3rem, 6vw, 5rem);
+    padding-block: 2rem; color: var(--muted); font-size: var(--step--1);
+  }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; align-items: center; justify-content: space-between; }
+  footer nav { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+  footer a { color: var(--muted); display: inline-flex; align-items: center; min-height: 2.75rem; }
+  footer a:hover { color: var(--text); }
+
+  /* ---------- reveal (IntersectionObserver) ---------- */
+  .reveal { transition: opacity .7s var(--ease-out), transform .7s var(--ease-out); }
+  .js .reveal { opacity: 0; transform: translateY(18px); }
+  .js .reveal.is-visible { opacity: 1; transform: none; }
+
+  /* stagger children of a revealed group */
+  .reveal.is-visible .stagger > * { animation: rise .6s var(--ease-out) backwards; }
+  .reveal.is-visible .stagger > *:nth-child(1) { animation-delay: .05s; }
+  .reveal.is-visible .stagger > *:nth-child(2) { animation-delay: .12s; }
+  .reveal.is-visible .stagger > *:nth-child(3) { animation-delay: .19s; }
+  .reveal.is-visible .stagger > *:nth-child(4) { animation-delay: .26s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .avatar-card { animation: none; background: var(--accent); }
+    .avatar-card::before { animation: none; background: var(--accent); }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ver â€” home">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+        <path d="M4 5.5 12 19l8-13.5M8 5.5l4 7 4-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Ver</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#craft">Craft</a>
+      <a href="#work">Work</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+      <button class="theme-toggle" type="button" id="themeToggle" aria-label="Switch color theme" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6l1.4 1.4m10 10 1.4 1.4m0-12.8-1.4 1.4m-10 10-1.4 1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Available for interesting problems</p>
+        <h1 id="hero-title">I build tools that make agents <span class="grad">ship with evidence</span>.</h1>
+        <p class="lede">Hi, Iâ€™m <strong>Ver</strong> â€” known online as PapaBear. I design agent workflows, zero-build web apps, and developer tooling that stays fast, accessible, and honest about what actually works.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#work">
+            See the work
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/PapaBear911" rel="me noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.88 1.52 2.31 1.08 2.87.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="avatar-card">
+        <img src="https://avatars.githubusercontent.com/u/108722772?v=4" width="460" height="460" alt="Portrait avatar of Ver (PapaBear)" decoding="async" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-title">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 id="about-title">Short version</h2>
+        <p>I care about the gap between â€œit runs on my machineâ€ and â€œsomeone else can verify it shipped.â€</p>
+      </div>
+      <div class="split">
+        <div>
+          <p>Most of my work lives where agents meet real constraints: clinical systems, media pipelines, sports-day scoreboards on a phone. Small teams, no build steps to hide behind, and users who notice when a page is slow.</p>
+          <p>That pushed me toward boring, durable choices â€” native CSS, plain ES modules, checks that fail loudly. Animation is the last layer, never the load-bearing one.</p>
+        </div>
+        <div class="facts stagger">
+          <div class="fact"><b>4</b><span>years building</span></div>
+          <div class="fact"><b>10+</b><span>shipped projects</span></div>
+          <div class="fact"><b>0</b><span>runtime deps in my CLI</span></div>
+          <div class="fact"><b>1</b><span>rule: show the evidence</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="craft" aria-labelledby="craft-title">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 id="craft-title">What I reach for</h2>
+        <p>The stack is deliberately small. Every addition has to earn its bytes.</p>
+      </div>
+      <div class="cards stagger">
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18c-3 0-5-1.5-5-4 0-1.5.5-2.5 1-3.5-.5-.5-1-1-1-2 0-2 1.5-3.5 3.5-3.5.8 0 1.5.3 2 .7C10.5 5 11.2 4.7 12 4.7c2.2 0 3.5 1.3 3.5 3 0 .5 0 1-.2 1.4 1.8.6 3.2 2 3.2 4.2 0 2.6-2 4.7-5 4.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M8 10.5h3m-3 3h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+          <h3>Semantics and access first</h3>
+          <p>Landmarks, headings, focus order, and <code>prefers-reduced-motion</code> before a single keyframe. If the page fails with CSS off, the animation is decoration, not structure.</p>
+          <div class="meta"><span class="tag">HTML5</span><span class="tag">ARIA</span><span class="tag">WCAG AA</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="4" width="17" height="16" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 9h17M9 9v11" stroke="currentColor" stroke-width="1.7"/></svg></div>
+          <h3>CSS as the animation engine</h3>
+          <p>Grid, custom properties, <code>clamp()</code>, container queries. Transitions on transform and opacity keep the compositor busy and the main thread free.</p>
+          <div class="meta"><span class="tag">Grid</span><span class="tag">Container queries</span><span class="tag">GPU-friendly</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 17V9m5 8V5m5 12v-6m5 6V7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+          <h3>Evidence over vibes</h3>
+          <p>Observable outcomes, executed checks, rollback notes. VER encodes that loop so an agent canâ€™t claim green without showing output.</p>
+          <div class="meta"><span class="tag">Node.js</span><span class="tag">AGENTS.md</span><span class="tag">CI</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+          <h3>Speed as a feature</h3>
+          <p>Lazy media, responsive images, subset fonts, no layout thrash. A hero that animates in 300 ms and scores green on Core Web Vitals.</p>
+          <div class="meta"><span class="tag">WebP</span><span class="tag">CWV</span><span class="tag">LCP</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-title">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 id="work-title">Selected work</h2>
+        <p>Public, runnable, and small enough to read in one sitting.</p>
+      </div>
+      <div class="work-list stagger">
+        <a class="work-item" href="https://github.com/PapaBear911/VER" rel="noopener">
+          <h3>VER â€” Visualize Â· Engineer Â· Release <span class="stars">MIT</span></h3>
+          <p>A three-phase agent loop with hard evidence gates, delivered as one <code>AGENTS.md</code> plus an installer CLI with zero third-party runtime dependencies.</p>
+          <div class="meta"><span class="tag">JavaScript</span><span class="tag">Agent workflow</span><span class="tag">Node 18+</span></div>
+        </a>
+        <a class="work-item" href="https://github.com/PapaBear911/OpenTeamQueue" rel="noopener">
+          <h3>OpenTeamQueue <span class="stars">Badminton Â· Pickleball Â· Tennis</span></h3>
+          <p>Zero-build queue randomizer, live scoreboard, and tournament manager. Single-file architecture, offline-first, state in <code>localStorage</code>.</p>
+          <div class="meta"><span class="tag">HTML</span><span class="tag">Vanilla JS</span><span class="tag">Offline</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap reveal">
+      <h2 id="contact-title">Have something that must work the first time?</h2>
+      <p>Agent pipelines, accessibility rescues, or a page that has to load fast on a five-year-old phone. Iâ€™m easiest to reach on GitHub.</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn btn-primary" href="https://github.com/PapaBear911" rel="me noopener">Open a discussion on GitHub</a>
+        <a class="btn btn-ghost" href="mailto:?subject=Hello%20Ver">Email me</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Â© <span id="year">2026</span> Ver Sangil. Built with semantic HTML, native CSS, and about 40 lines of JavaScript.</p>
+    <nav aria-label="Elsewhere">
+      <a href="https://github.com/PapaBear911" rel="me noopener">GitHub</a>
+      <a href="https://github.com/PapaBear911/VER" rel="noopener">VER</a>
+      <a href="#top">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Ver Sangil","alternateName":"PapaBear","url":"https://papabear911.github.io/","image":"https://avatars.githubusercontent.com/u/108722772?v=4","sameAs":["https://github.com/PapaBear911"],"jobTitle":"Software Engineer","knowsAbout":["Agent workflows","Accessibility","Frontend performance","Node.js"]}
+</script>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const KEY = 'theme';
+
+  const apply = (mode) => {
+    if (mode) root.dataset.theme = mode; else delete root.dataset.theme;
+    toggle.setAttribute('aria-pressed', String(mode === 'dark'));
+  };
+
+  try { apply(localStorage.getItem(KEY)); } catch {}
+
+  toggle.addEventListener('click', () => {
+    const dark = root.dataset.theme === 'dark'
+      || (!root.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
+    const next = dark ? 'light' : 'dark';
+    apply(next);
+    try { localStorage.setItem(KEY, next); } catch {}
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const items = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    items.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('is-visible');
+      io.unobserve(entry.target);
+    }
+    // sweep: sections skipped by an anchor jump are already above the viewport
+    for (const el of items) {
+      if (el.classList.contains('is-visible')) continue;
+      if (el.getBoundingClientRect().top < innerHeight) {
+        el.classList.add('is-visible');
+        io.unobserve(el);
+      }
+    }
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  items.forEach((el) => io.observe(el));
+})();
+</script>
+</body>
+</html>
