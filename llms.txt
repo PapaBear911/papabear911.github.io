@@ -1,0 +1,31 @@
+# Ver Sangil (PapaBear911)
+
+> Software Engineer & Web Developer specializing in dependable line-of-business applications, healthcare systems, database performance (.NET, Angular, SQL Server), and evidence-first AI agent engineering (V.E.R. framework).
+
+## Profile & Background
+- Name: Ver Sangil
+- Handle: PapaBear911
+- Primary Role: Web Developer at E-Med Healthcare Solutions Inc. / Software Engineer
+- Education: STI College - Lucena
+- Location: Dipolog, Zamboanga Peninsula, Philippines (Deployments across Manila and regional healthcare facilities)
+- Website: https://papabear911.github.io/
+- GitHub: https://github.com/PapaBear911
+- LinkedIn: https://ph.linkedin.com/in/versangil / https://www.linkedin.com/in/versangil/
+
+## Core Competencies & Tech Stack
+- Backend Engineering: C#, .NET, ASP.NET Web API, RESTful services, IIS, Windows Server
+- Frontend Engineering: Angular, TypeScript, JavaScript, HTML5, modern CSS
+- Database Systems: Microsoft SQL Server (2014-2022), T-SQL, stored procedures, indexing, query optimization
+- Healthcare IT & Line-of-Business: Hospital Information Systems (HIS), EMR/EHR workflows, PhilHealth eClaims, audit trails
+- AI Engineering: Model Context Protocol (MCP), agent orchestration, RAG, V.E.R. (Visualize, Engineer, Release) loop
+
+## Engineering Loop
+1. Visualize: Understand the root problem before touching code.
+2. Engineer: Make the smallest focused change that works.
+3. Release: Ship only with verified evidence and clean rollback paths.
+
+## Key Projects
+- VER (Visualize, Engineer, Release): Three-phase agent loop with hard evidence gates, delivered as AGENTS.md plus an installer CLI with zero third-party runtime dependencies (https://github.com/PapaBear911/VER).
+- OpenTeamQueue: Zero-build offline tournament manager and queue randomizer for racket sports (https://github.com/PapaBear911/OpenTeamQueue).
+- MEDIX-MCP: Headless engineering knowledge and repository intelligence platform connecting AI agents to source code, SQL databases, Git repos, and technical documentation.
+- SENTINEL: Evidence-driven engineering audit and verification agent.
