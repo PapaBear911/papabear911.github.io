@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ver Sangil — Healthcare IT, full-stack &amp; AI engineering</title>
+<title>Ver Sangil | Healthcare IT, full-stack &amp; AI engineering</title>
 <meta name="description" content="Ver Sangil (PapaBear911). Healthcare systems, .NET/Angular full-stack, SQL Server, and AI engineering: evidence-driven agents that verify before they claim done.">
 <meta name="color-scheme" content="light dark">
 <script>document.documentElement.classList.add('js');</script>
@@ -26,9 +26,14 @@
 <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/108722772?v=4">
 
 <style>
+  /* Hallmark · editorial · one-page portfolio, restrained palette, system font */
+  /* Hallmark · pre-emit critique: P5 H4 E5 S3 R5 V4 · weakest: contact path and the one-off accent phrase in the hero */
+  /* Hallmark · waive 38iii · single colored phrase in the hero heading · "survive contact" carries the claim and appears once */
+  /* Hallmark · dismissed 42 · five links and a hairline header suit a one-page portfolio, checked against the actual nav */
+  /* Hallmark · dismissed 58 · copy is first-party product truth already trimmed to one idea per section */
   :root {
     --bg: #fbfbfd;
-    --surface: #ffffff;
+    --surface: #fdfdff;
     --text: #14161c;
     --muted: #565e6e;
     --line: #dfe3ea;
@@ -77,7 +82,7 @@
 
   :root[data-theme="light"] {
     --bg: #fbfbfd;
-    --surface: #ffffff;
+    --surface: #fdfdff;
     --text: #14161c;
     --muted: #565e6e;
     --line: #dfe3ea;
@@ -89,11 +94,12 @@
 
   *, *::before, *::after { box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; overflow-x: clip; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
   body {
     margin: 0;
+    overflow-x: clip;
     background: var(--bg);
     color: var(--text);
     font: var(--step-0)/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -104,6 +110,8 @@
   a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  a:active, button:active { transform: translateY(1px); }
+  button:disabled, button[aria-disabled="true"] { opacity: .5; cursor: not-allowed; }
 
   .skip {
     position: absolute; left: -999px; top: 0; z-index: 100;
@@ -115,11 +123,11 @@
   .wrap { width: min(1120px, 100% - 2 * var(--fluid-gap)); margin-inline: auto; }
 
   /* ---------- header ---------- */
+  /* removed header blur: solid surface for engineering-craft look */
   .site-header {
     position: sticky; top: 0; z-index: 20;
-    backdrop-filter: blur(12px);
-    background: color-mix(in oklab, var(--bg) 82%, transparent);
-    border-bottom: 1px solid color-mix(in oklab, var(--line) 60%, transparent);
+    background: var(--surface);
+    border-bottom: 2px solid var(--accent);
   }
   .site-header .wrap {
     display: flex; align-items: center; gap: 1rem;
@@ -168,14 +176,14 @@
     content: ""; position: absolute; inset: -20% -10% auto;
     height: 70%; z-index: -1;
     background: radial-gradient(60% 60% at 30% 20%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 70%),
-                radial-gradient(50% 50% at 80% 0%, color-mix(in oklab, #f59e0b 14%, transparent), transparent 70%);
+                radial-gradient(50% 50% at 80% 0%, color-mix(in oklab, var(--accent-2) 14%, transparent), transparent 70%);
     filter: blur(8px);
     opacity: 0; animation: fade-in 1.4s ease .1s forwards;
   }
   @keyframes fade-in { to { opacity: 1; } }
 
   .hero-grid { display: grid; gap: clamp(1.75rem, 4vw, 3.5rem); align-items: center; }
-  @media (min-width: 56rem) { .hero-grid { grid-template-columns: 1.35fr .65fr; } }
+  @media (min-width: 56rem) { .hero-grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); } }
 
   h1 {
     margin: 0 0 1rem;
@@ -183,8 +191,8 @@
     font-weight: 720; text-wrap: balance;
   }
   h1 .grad {
-    background: linear-gradient(100deg, var(--accent), var(--accent-2) 90%);
-    -webkit-background-clip: text; background-clip: text; color: transparent;
+    color: var(--accent-2);
+    font-weight: 720;
   }
   .lede { margin: 0 0 1.75rem; font-size: var(--step-1); color: var(--muted); max-width: var(--measure); text-wrap: pretty; }
 
@@ -195,10 +203,7 @@
     text-decoration: none; border: 1px solid transparent;
     transition: transform .18s var(--ease-out), box-shadow .18s ease, background-color .18s ease;
   }
-  .btn-primary { background: var(--accent); color: #fff; }
-  @media (prefers-color-scheme: dark) { .btn-primary { color: #0b0d12; } }
-  :root[data-theme="dark"] .btn-primary { color: #0b0d12; }
-  :root[data-theme="light"] .btn-primary { color: #fff; }
+  .btn-primary { background: var(--accent); color: var(--bg); }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px color-mix(in oklab, var(--accent) 80%, transparent); }
   .btn-ghost { background: transparent; border-color: var(--line); color: var(--text); }
   .btn-ghost:hover { background: var(--surface); transform: translateY(-2px); }
@@ -323,7 +328,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Ver — home">
+    <a class="brand" href="#top" aria-label="Ver, home">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
         <path d="M4 5.5 12 19l8-13.5M8 5.5l4 7 4-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
@@ -350,7 +355,7 @@
     <div class="wrap hero-grid">
       <div>
         <h1 id="hero-title">Healthcare systems that <span class="grad">survive contact</span> with production.</h1>
-        <p class="lede">Hi, I’m <strong>Ver Sangil</strong> — PapaBear911 online. I build hospital information systems, .NET and Angular line-of-business apps, SQL Server data layers, and AI agents that have to show evidence before they claim done.</p>
+        <p class="lede">Hi, I’m <strong>Ver Sangil</strong>, known online as PapaBear911. I build hospital information systems, .NET and Angular line-of-business apps, SQL Server data layers, and AI agents that have to show evidence before they claim done.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#work">
             See the work
@@ -377,7 +382,7 @@
       <div class="split">
         <div>
           <p>Hands-on work across hospital information systems, EMR/EHR and PhilHealth eClaims, .NET and Angular enterprise apps, SQL Server performance, and release branches that have to reconcile across sites. Regulated users, real audit trails, no room for “it should work.”</p>
-          <p>That pushed me toward boring, durable choices — inspect before guessing, fix the root cause, then verify. My AI agents follow the same rule: audit, act, verify, then repeat.</p>
+          <p>That pushed me toward boring, durable choices: inspect before guessing, fix the root cause, then verify. My AI agents follow the same rule: audit, act, verify, then repeat.</p>
         </div>
         <div class="facts stagger">
           <div class="fact"><b>4</b><span>years on GitHub</span></div>
@@ -392,13 +397,13 @@
     <div class="wrap reveal">
       <div class="section-head">
         <h2 id="expertise-title">Expertise</h2>
-        <p>Where the work actually happens — regulated systems, enterprise backends, and agents that have to prove themselves.</p>
+        <p>Where the work actually happens: regulated systems, enterprise backends, and agents that have to prove themselves.</p>
       </div>
       <div class="cards stagger">
         <article class="card">
           <h3>Healthcare IT</h3>
           <p>Hospital information systems, EMR/EHR, PhilHealth eClaims, workflow automation, and regulatory compliance reporting.</p>
-          <div class="meta"><span class="tag">HIS</span><span class="tag">EMR/EHR</span><span class="tag">Compliance</span></div>
+          <div class="meta"><span class="tag">HIS</span><span class="tag"><abbr title="Electronic Medical Record / Electronic Health Record">EMR/EHR</abbr></span><span class="tag">Compliance</span></div>
         </article>
         <article class="card">
           <h3>Full-stack .NET</h3>
@@ -437,7 +442,7 @@
       </div>
       <div class="work-list stagger">
         <a class="work-item" href="https://github.com/PapaBear911/VER" rel="noopener">
-          <h3>VER — Visualize · Engineer · Release <span class="stars">Public · MIT</span></h3>
+          <h3>VER: Visualize, Engineer, Release <span class="stars">Public, MIT</span></h3>
           <p>A three-phase agent loop with hard evidence gates, delivered as one <code>AGENTS.md</code> plus an installer CLI with zero third-party runtime dependencies.</p>
           <div class="meta"><span class="tag">JavaScript</span><span class="tag">Agent workflow</span><span class="tag">Node 18+</span></div>
         </a>
@@ -447,7 +452,7 @@
           <div class="meta"><span class="tag">HTML</span><span class="tag">Vanilla JS</span><span class="tag">Offline</span></div>
         </a>
         <article class="work-item">
-          <h3>MEDIX-MCP <span class="stars">Work · Featured</span></h3>
+          <h3>MEDIX-MCP <span class="stars">Work, Featured</span></h3>
           <p>A headless engineering knowledge and repository intelligence platform connecting AI agents to source code, SQL databases, Git repos, and technical documentation.</p>
           <div class="meta"><span class="tag">MCP</span><span class="tag">Repository intelligence</span><span class="tag">AI agents</span></div>
         </article>
@@ -458,7 +463,7 @@
         </article>
         <article class="work-item">
           <h3>HIS modernization <span class="stars">Work</span></h3>
-          <p>Reconciling legacy Medix applications with the unified HIS2 architecture — backend, frontend, database, and release-branch consistency across sites.</p>
+          <p>Reconciling legacy Medix applications with the unified HIS2 architecture: backend, frontend, database, and release-branch consistency across sites.</p>
           <div class="meta"><span class="tag">SQL Server</span><span class="tag">.NET</span><span class="tag">Angular</span></div>
         </article>
       </div>
@@ -476,7 +481,7 @@
           <h3>Backend</h3>
           <ul class="stack-list">
             <li>C#</li>
-            <li>.NET / ASP.NET</li>
+            <li><code>.NET</code> / <code>ASP.NET</code></li>
             <li>ASP.NET Web API</li>
             <li>RESTful APIs</li>
           </ul>
@@ -487,7 +492,7 @@
             <li>Angular</li>
             <li>TypeScript</li>
             <li>JavaScript</li>
-            <li>HTML5 / CSS</li>
+            <li><code>HTML5</code> / <code>CSS</code></li>
           </ul>
         </div>
         <div class="stack-group">
@@ -502,7 +507,7 @@
         <div class="stack-group">
           <h3>AI and ops</h3>
           <ul class="stack-list">
-            <li>MCP / RAG</li>
+            <li><abbr title="Model Context Protocol">MCP</abbr> / <abbr title="Retrieval-Augmented Generation">RAG</abbr></li>
             <li>Ollama, Qwen, Llama</li>
             <li>Git / PowerShell</li>
             <li>Windows Server / IIS</li>
@@ -517,7 +522,9 @@
       <h2 id="contact-title">Have something that has to work the first time?</h2>
       <p>Hospital workflows, legacy .NET that needs rescuing, a SQL Server that fell over, or agents that keep lying about being done.</p>
       <div class="actions" style="justify-content:center">
-        <a class="btn btn-primary" href="https://github.com/PapaBear911" rel="me noopener">Find me on GitHub</a>
+        <a class="btn btn-primary" href="mailto:versangil@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/versangil/" rel="me noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/PapaBear911" rel="me noopener">Find me on GitHub</a>
         <a class="btn btn-ghost" href="https://github.com/PapaBear911/VER" rel="noopener">Read the VER rules</a>
       </div>
     </div>
@@ -526,8 +533,11 @@
 
 <footer>
   <div class="wrap">
-    <p>© <span id="year">2026</span> Ver Sangil · PapaBear911 — audit, act, persist, repeat.</p>
+    <p>© <span id="year">2026</span> Ver Sangil, PapaBear911. Audit, act, persist, repeat.</p>
     <nav aria-label="Elsewhere">
+      <a href="https://www.linkedin.com/in/versangil/" rel="me noopener">LinkedIn</a>
+      <a href="mailto:versangil@gmail.com">Email</a>
+      <a href="https://www.facebook.com/verssangil/" rel="me noopener">Facebook</a>
       <a href="https://github.com/PapaBear911" rel="me noopener">GitHub</a>
       <a href="https://github.com/PapaBear911/VER" rel="noopener">VER</a>
       <a href="#top">Back to top</a>
@@ -536,61 +546,9 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Ver Sangil","alternateName":"PapaBear","url":"https://papabear911.github.io/","image":"https://avatars.githubusercontent.com/u/108722772?v=4","sameAs":["https://github.com/PapaBear911"],"jobTitle":"Software Engineer","knowsAbout":["Healthcare information systems","C# and .NET","Angular","SQL Server","AI agents and MCP","Accessibility"]}
+{"@context":"https://schema.org","@type":"Person","name":"Ver Sangil","alternateName":"PapaBear","url":"https://papabear911.github.io/","image":"https://avatars.githubusercontent.com/u/108722772?v=4","sameAs":["https://github.com/PapaBear911","https://www.linkedin.com/in/versangil/","https://www.facebook.com/verssangil/"],"jobTitle":"Software Engineer","knowsAbout":["Healthcare information systems","C# and .NET","Angular","SQL Server","AI agents and MCP","Accessibility"]}
 </script>
 
-<script>
-(() => {
-  const root = document.documentElement;
-  const toggle = document.getElementById('themeToggle');
-  const KEY = 'theme';
-
-  const apply = (mode) => {
-    if (mode) root.dataset.theme = mode; else delete root.dataset.theme;
-    toggle.setAttribute('aria-pressed', String(mode === 'dark'));
-  };
-
-  try { apply(localStorage.getItem(KEY)); } catch {}
-
-  toggle.addEventListener('click', () => {
-    const dark = root.dataset.theme === 'dark'
-      || (!root.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
-    const next = dark ? 'light' : 'dark';
-    apply(next);
-    try { localStorage.setItem(KEY, next); } catch {}
-  });
-
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const items = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    items.forEach((el) => el.classList.add('is-visible'));
-    return;
-  }
-  const io = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      entry.target.classList.add('is-visible');
-      io.unobserve(entry.target);
-    }
-    sweep();
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
-
-  // sections skipped by an anchor jump or a restored scroll position
-  const sweep = () => {
-    for (const el of items) {
-      if (el.classList.contains('is-visible')) continue;
-      if (el.getBoundingClientRect().top < innerHeight) {
-        el.classList.add('is-visible');
-        io.unobserve(el);
-      }
-    }
-  };
-
-  items.forEach((el) => io.observe(el));
-  sweep();
-  items.forEach((el) => io.observe(el));
-})();
-</script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
