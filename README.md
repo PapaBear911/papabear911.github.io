@@ -1,6 +1,6 @@
 # papabear911.github.io
 
-Personal portfolio & professional landing page for Ver Savilla Sangil.
+Personal portfolio & professional landing page for Ver Sangil.
 
 **Software Engineering · Healthcare IT · Full-Stack Development · AI Engineering**
 
