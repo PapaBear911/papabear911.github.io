@@ -7,40 +7,59 @@
 <meta name="description" content="Ver Sangil (PapaBear911). Healthcare systems, .NET/Angular full-stack, SQL Server, and AI engineering: evidence-driven agents that verify before they claim done.">
 <meta name="color-scheme" content="light dark">
 <script>document.documentElement.classList.add('js');</script>
-<meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070c18" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f8f6f2" media="(prefers-color-scheme: light)">
 <link rel="canonical" href="https://papabear911.github.io/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Ver Sangil">
-<meta property="og:description" content="Healthcare IT, full-stack .NET/Angular, SQL Server, and AI engineering. Audit, act, verify.">
+<meta property="og:description" content="Healthcare IT, full-stack .NET/Angular, SQL Server, and AI engineering. Visualize, engineer, release.">
 <meta property="og:url" content="https://papabear911.github.io/">
-<meta property="og:image" content="https://avatars.githubusercontent.com/u/108722772?v=4">
-<meta property="og:image:alt" content="Ver's GitHub avatar">
+<meta property="og:image" content="https://papabear911.github.io/assets/images/ver-hero-portrait.png">
+<meta property="og:image:alt" content="Portrait photograph of Ver Sangil">
 <meta property="profile:first_name" content="Ver">
 <meta property="profile:username" content="PapaBear911">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ver Sangil">
-<meta name="twitter:description" content="Healthcare IT, full-stack .NET/Angular, SQL Server, and AI engineering. Audit, act, verify.">
-<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/108722772?v=4">
+<meta name="twitter:description" content="Healthcare IT, full-stack .NET/Angular, SQL Server, and AI engineering. Visualize, engineer, release.">
+<meta name="twitter:image" content="https://papabear911.github.io/assets/images/ver-hero-portrait.png">
 
 <style>
-  /* Hallmark · editorial · one-page portfolio, restrained palette, system font */
-  /* Hallmark · pre-emit critique: P5 H4 E5 S3 R5 V4 · weakest: contact path and the one-off accent phrase in the hero */
+  /* Hallmark · systems-in-motion · dual-mode parallax technical profile */
+  /* Hallmark · pre-emit critique: P5 H5 E5 S4 R5 V5 · technical systems in motion, deep navy and light coordinate grid */
   /* Hallmark · waive 38iii · single colored phrase in the hero heading · "survive contact" carries the claim and appears once */
   /* Hallmark · dismissed 42 · five links and a hairline header suit a one-page portfolio, checked against the actual nav */
   /* Hallmark · dismissed 58 · copy is first-party product truth already trimmed to one idea per section */
   :root {
-    --bg: #fbfbfd;
-    --surface: #fdfdff;
-    --text: #14161c;
-    --muted: #565e6e;
-    --line: #dfe3ea;
-    --accent: #1d55e6;
-    --accent-2: #b45309;
-    --accent-soft: #e8efff;
-    --shadow: 0 1px 2px rgb(16 24 40 / 6%), 0 12px 32px -12px rgb(16 24 40 / 18%);
+    --bg: #f8f6f2;
+    --surface: #ffffff;
+    --surface-hover: #f3efe8;
+    --text: #1a1917;
+    --lede: #3b3935;
+    --muted: #5e5952;
+    --line: #ddd6c8;
+    --line-subtle: #eae4d8;
+    --accent: #1f4e5b;
+    --accent-hover: #163943;
+    --accent-2: #2e4057;
+    --accent-glow: #0284c7;
+    --accent-soft: #dbe7ea;
+    --tag-bg: #ece6dc;
+    --grid-line: rgba(31, 78, 91, 0.06);
+    --vector-line: rgba(31, 78, 91, 0.2);
+    --status-ok: #059669;
+    --status-ok-bg: rgba(5, 150, 105, 0.12);
+    --status-ok-border: rgba(5, 150, 105, 0.28);
+    --code-bg: #1c2024;
+    --code-text: #e2e8f0;
+    --code-border: #2d333b;
+    --code-header: #94a3b8;
+    --code-header-border: rgba(255, 255, 255, 0.12);
+    --spotlight-bg: rgba(31, 78, 91, 0.12);
+    --modal-backdrop: rgba(26, 25, 23, 0.52);
+    --shadow: 0 1px 3px rgba(26, 25, 23, 0.04), 0 10px 28px -10px rgba(26, 25, 23, 0.08);
+    --shadow-elevated: 0 4px 10px rgba(26, 25, 23, 0.06), 0 20px 38px -12px rgba(26, 25, 23, 0.12);
 
     --step--2: clamp(0.78rem, 0.77rem + 0.05vw, 0.82rem);
     --step--1: clamp(0.88rem, 0.86rem + 0.1vw, 0.95rem);
@@ -51,50 +70,119 @@
     --fluid-gap: clamp(1rem, 0.5rem + 2vw, 2rem);
     --measure: 68ch;
     --radius: 14px;
+    --radius-sm: 8px;
+    --font-serif: Iowan Old Style, "Palatino Linotype", "URW Palladio L", P052, Palatino, Georgia, serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     --ease-out: cubic-bezier(.22, 1, .36, 1);
+    --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration-fast: 0.16s;
+    --duration-normal: 0.24s;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0b0d12;
-      --surface: #12151d;
-      --text: #eef1f7;
-      --muted: #a3adc0;
-      --line: #262c3a;
-      --accent: #7aa2ff;
-      --accent-2: #f59e0b;
-      --accent-soft: #18213a;
-      --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 16px 40px -16px rgb(0 0 0 / 60%);
+      --bg: #070c18;
+      --surface: #0f172a;
+      --surface-hover: #162038;
+      --text: #f8fafc;
+      --lede: #cbd5e1;
+      --muted: #94a3b8;
+      --line: #1e293b;
+      --line-subtle: #172033;
+      --accent: #38bdf8;
+      --accent-hover: #7dd3fc;
+      --accent-2: #818cf8;
+      --accent-glow: #2dd4bf;
+      --accent-soft: rgba(56, 189, 248, 0.14);
+      --tag-bg: #131c31;
+      --grid-line: rgba(56, 189, 248, 0.06);
+      --vector-line: rgba(56, 189, 248, 0.22);
+      --status-ok: #10b981;
+      --status-ok-bg: rgba(16, 185, 129, 0.14);
+      --status-ok-border: rgba(16, 185, 129, 0.32);
+      --code-bg: #0a0f1d;
+      --code-text: #e2e8f0;
+      --code-border: #1e293b;
+      --code-header: #94a3b8;
+      --code-header-border: rgba(255, 255, 255, 0.12);
+      --spotlight-bg: rgba(56, 189, 248, 0.16);
+      --modal-backdrop: rgba(7, 12, 24, 0.82);
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 12px 30px -10px rgba(0, 0, 0, 0.6);
+      --shadow-elevated: 0 4px 10px rgba(0, 0, 0, 0.5), 0 24px 44px -12px rgba(0, 0, 0, 0.7);
     }
   }
 
   :root[data-theme="dark"] {
-    --bg: #0b0d12;
-    --surface: #12151d;
-    --text: #eef1f7;
-    --muted: #a3adc0;
-    --line: #262c3a;
-    --accent: #7aa2ff;
-    --accent-2: #f59e0b;
-    --accent-soft: #18213a;
-    --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 16px 40px -16px rgb(0 0 0 / 60%);
+    --bg: #070c18;
+    --surface: #0f172a;
+    --surface-hover: #162038;
+    --text: #f8fafc;
+    --lede: #cbd5e1;
+    --muted: #94a3b8;
+    --line: #1e293b;
+    --line-subtle: #172033;
+    --accent: #38bdf8;
+    --accent-hover: #7dd3fc;
+    --accent-2: #818cf8;
+    --accent-glow: #2dd4bf;
+    --accent-soft: rgba(56, 189, 248, 0.14);
+    --tag-bg: #131c31;
+    --grid-line: rgba(56, 189, 248, 0.06);
+    --vector-line: rgba(56, 189, 248, 0.22);
+    --status-ok: #10b981;
+    --status-ok-bg: rgba(16, 185, 129, 0.14);
+    --status-ok-border: rgba(16, 185, 129, 0.32);
+    --code-bg: #0a0f1d;
+    --code-text: #e2e8f0;
+    --code-border: #1e293b;
+    --code-header: #94a3b8;
+    --code-header-border: rgba(255, 255, 255, 0.12);
+    --spotlight-bg: rgba(56, 189, 248, 0.16);
+    --modal-backdrop: rgba(7, 12, 24, 0.82);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 12px 30px -10px rgba(0, 0, 0, 0.6);
+    --shadow-elevated: 0 4px 10px rgba(0, 0, 0, 0.5), 0 24px 44px -12px rgba(0, 0, 0, 0.7);
   }
 
   :root[data-theme="light"] {
-    --bg: #fbfbfd;
-    --surface: #fdfdff;
-    --text: #14161c;
-    --muted: #565e6e;
-    --line: #dfe3ea;
-    --accent: #1d55e6;
-    --accent-2: #b45309;
-    --accent-soft: #e8efff;
-    --shadow: 0 1px 2px rgb(16 24 40 / 6%), 0 12px 32px -12px rgb(16 24 40 / 18%);
+    --bg: #f8f6f2;
+    --surface: #ffffff;
+    --surface-hover: #f3efe8;
+    --text: #1a1917;
+    --lede: #3b3935;
+    --muted: #5e5952;
+    --line: #ddd6c8;
+    --line-subtle: #eae4d8;
+    --accent: #1f4e5b;
+    --accent-hover: #163943;
+    --accent-2: #2e4057;
+    --accent-glow: #0284c7;
+    --accent-soft: #dbe7ea;
+    --tag-bg: #ece6dc;
+    --grid-line: rgba(31, 78, 91, 0.06);
+    --vector-line: rgba(31, 78, 91, 0.2);
+    --status-ok: #059669;
+    --status-ok-bg: rgba(5, 150, 105, 0.12);
+    --status-ok-border: rgba(5, 150, 105, 0.28);
+    --code-bg: #1c2024;
+    --code-text: #e2e8f0;
+    --code-border: #2d333b;
+    --code-header: #94a3b8;
+    --code-header-border: rgba(255, 255, 255, 0.12);
+    --spotlight-bg: rgba(31, 78, 91, 0.12);
+    --modal-backdrop: rgba(26, 25, 23, 0.52);
+    --shadow: 0 1px 3px rgba(26, 25, 23, 0.04), 0 10px 28px -10px rgba(26, 25, 23, 0.08);
+    --shadow-elevated: 0 4px 10px rgba(26, 25, 23, 0.06), 0 20px 38px -12px rgba(26, 25, 23, 0.12);
   }
 
   *, *::before, *::after { box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; scroll-padding-top: 5rem; overflow-x: clip; }
+  ::selection {
+    background: var(--accent-soft);
+    color: var(--text);
+  }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; overflow-x: clip; caret-color: var(--accent); }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
   body {
@@ -102,14 +190,14 @@
     overflow-x: clip;
     background: var(--bg);
     color: var(--text);
-    font: var(--step-0)/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font: var(--step-0)/1.65 var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
 
   img, svg { display: block; max-width: 100%; }
   a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
-  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: var(--radius-sm); }
   a:active, button:active { transform: translateY(1px); }
   button:disabled, button[aria-disabled="true"] { opacity: .5; cursor: not-allowed; }
 
@@ -120,181 +208,473 @@
   }
   .skip:focus { left: 0; }
 
-  .wrap { width: min(1120px, 100% - 2 * var(--fluid-gap)); margin-inline: auto; }
+  .wrap { width: min(1120px, 100% - 2 * var(--fluid-gap)); margin-inline: auto; position: relative; z-index: 2; }
 
-  /* ---------- header ---------- */
-  /* removed header blur: solid surface for engineering-craft look */
+  /* ---------- header & scroll tracking ---------- */
   .site-header {
     position: sticky; top: 0; z-index: 20;
     background: var(--surface);
     border-bottom: 2px solid var(--accent);
   }
+  .scroll-track {
+    position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+    background: transparent; z-index: 30;
+  }
+  .scroll-fill {
+    height: 100%; width: 0%; background: var(--accent);
+    transition: width .05s linear;
+  }
   .site-header .wrap {
     display: flex; align-items: center; gap: 1rem;
-    padding-block: .7rem;
+    padding-block: .75rem;
   }
-  .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 650; color: var(--text); text-decoration: none; letter-spacing: -.01em; }
-  .brand svg { width: 26px; height: 26px; flex: none; }
+  .brand {
+    display: inline-flex; align-items: center; gap: .6rem;
+    font-family: var(--font-serif); font-weight: 700; font-size: 1.2rem;
+    color: var(--text); text-decoration: none; letter-spacing: -.01em;
+  }
+  .brand svg { width: 26px; height: 26px; flex: none; color: var(--accent); }
   .brand path {
     stroke-dasharray: 120; stroke-dashoffset: 120;
     animation: draw 1.2s var(--ease-out) .15s forwards;
   }
   @keyframes draw { to { stroke-dashoffset: 0; } }
 
-  .nav { margin-left: auto; display: flex; align-items: center; gap: .25rem; }
+  .nav-status-badge {
+    display: inline-flex; align-items: center; gap: .4rem;
+    font-size: var(--step--2); color: var(--status-ok);
+    background: var(--status-ok-bg); border: 1px solid var(--status-ok-border);
+    padding: .2rem .6rem; border-radius: 999px;
+    font-family: var(--font-mono); font-weight: 600; letter-spacing: .02em;
+    white-space: nowrap;
+  }
+  .nav-status-beacon {
+    width: 6px; height: 6px; background: var(--status-ok);
+    border-radius: 50%; box-shadow: 0 0 6px var(--status-ok);
+  }
+  @media (max-width: 38rem) { .nav-status-badge { display: none; } }
+
+  .nav { margin-left: auto; display: flex; align-items: center; gap: .35rem; }
   .nav a {
     color: var(--muted); text-decoration: none; font-size: var(--step--1);
-    padding: .45rem .7rem; border-radius: 999px;
+    padding: .45rem .75rem; border-radius: 999px; min-height: 2.75rem;
+    display: inline-flex; align-items: center;
     transition: color .18s ease, background-color .18s ease;
   }
   .nav a:hover { color: var(--text); background: var(--accent-soft); }
-  .nav-cta { color: var(--text); border: 1px solid var(--line); }
+  .nav-cta {
+    color: var(--text); border: 1px solid var(--line);
+    font-weight: 550;
+  }
+  .nav-cta:hover { border-color: var(--accent); }
 
   code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-family: var(--font-mono);
     font-size: .94em; background: var(--accent-soft); color: var(--text);
     padding: .1em .35em; border-radius: 5px; font-synthesis: none;
   }
 
   .theme-toggle {
-    display: inline-grid; place-items: center; width: 2.2rem; height: 2.2rem;
-    margin-left: .25rem; border: 1px solid var(--line); border-radius: 999px;
+    display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem;
+    margin-left: .35rem; border: 1px solid var(--line); border-radius: 999px;
     background: var(--surface); color: var(--text); cursor: pointer;
-    transition: transform .25s var(--ease-out), background-color .18s ease;
+    transition: transform .25s var(--ease-spring), background-color .18s ease, border-color .18s ease;
   }
-  .theme-toggle:hover { transform: rotate(-12deg) scale(1.05); }
-  .theme-toggle svg { width: 15px; height: 15px; }
+  .theme-toggle:hover { transform: rotate(-12deg) scale(1.05); border-color: var(--accent); }
+  .theme-toggle svg { width: 16px; height: 16px; }
 
-  @media (max-width: 40rem) { .nav a:not(.nav-cta) { display: none; } }
+  @media (max-width: 42rem) { .nav a:not(.nav-cta) { display: none; } }
+
+  /* ---------- systems in motion background ---------- */
+  main { position: relative; }
+  .systems-background {
+    position: absolute; inset: 0;
+    pointer-events: none; overflow: clip; z-index: 0;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+  }
+  .matrix-layer {
+    position: absolute; inset: -64px 0 0 0;
+    will-change: transform;
+    background-image:
+      radial-gradient(var(--vector-line) 1px, transparent 1px),
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 32px 32px, 32px 32px, 32px 32px;
+  }
+  .network-canvas {
+    position: sticky; top: 0; display: block;
+    width: 100%; height: 100vh;
+    pointer-events: none;
+  }
+
+  .cursor-spotlight {
+    position: absolute; top: 0; left: 0; width: 340px; height: 340px; border-radius: 50%;
+    pointer-events: none; z-index: 1;
+    background: radial-gradient(circle, var(--spotlight-bg) 0%, transparent 70%);
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
 
   /* ---------- hero ---------- */
   .hero {
     position: relative; isolation: isolate; overflow: clip;
-    padding-block: clamp(3.5rem, 8vw, 7rem) clamp(2.5rem, 6vw, 4.5rem);
+    padding-block: clamp(2.5rem, 4.5vw, 4.5rem);
   }
-  .hero::before {
-    content: ""; position: absolute; inset: -20% -10% auto;
-    height: 70%; z-index: -1;
-    background: radial-gradient(60% 60% at 30% 20%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 70%),
-                radial-gradient(50% 50% at 80% 0%, color-mix(in oklab, var(--accent-2) 14%, transparent), transparent 70%);
-    filter: blur(8px);
-    opacity: 0; animation: fade-in 1.4s ease .1s forwards;
-  }
-  @keyframes fade-in { to { opacity: 1; } }
 
-  .hero-grid { display: grid; gap: clamp(1.75rem, 4vw, 3.5rem); align-items: center; }
-  @media (min-width: 56rem) { .hero-grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); } }
+  .hero-grid {
+    display: grid;
+    gap: clamp(1.75rem, 4vw, 3.25rem);
+    align-items: center;
+  }
+  @media (min-width: 56rem) {
+    .hero-grid {
+      grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.98fr);
+      align-items: center;
+    }
+  }
 
   h1 {
     margin: 0 0 1rem;
-    font-size: var(--step-3); line-height: 1.05; letter-spacing: -.03em;
-    font-weight: 720; text-wrap: balance;
+    font-family: var(--font-serif);
+    font-size: var(--step-3); line-height: 1.08; letter-spacing: -.02em;
+    font-weight: 700; text-wrap: balance;
+  }
+  .hero h1 {
+    max-width: 22ch;
+    font-size: clamp(2.2rem, 3.85vw, 3.5rem);
+    line-height: 1.08;
+    letter-spacing: -.025em;
+    margin: 0 0 .95rem;
   }
   h1 .grad {
-    color: var(--accent-2);
-    font-weight: 720;
+    color: var(--accent);
+    font-weight: 700;
   }
-  .lede { margin: 0 0 1.75rem; font-size: var(--step-1); color: var(--muted); max-width: var(--measure); text-wrap: pretty; }
+  .hero-badge-wrap { margin-bottom: .85rem; }
+  .lede { margin: 0 0 1.5rem; font-size: var(--step-0); color: var(--muted); max-width: 50ch; text-wrap: pretty; line-height: 1.58; }
 
-  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .85rem; }
   .btn {
-    display: inline-flex; align-items: center; gap: .5rem;
-    padding: .72rem 1.15rem; border-radius: 999px; font-size: var(--step--1); font-weight: 600;
-    text-decoration: none; border: 1px solid transparent;
-    transition: transform .18s var(--ease-out), box-shadow .18s ease, background-color .18s ease;
+    display: inline-flex; align-items: center; gap: .55rem;
+    padding: .75rem 1.35rem; border-radius: 999px; font-size: var(--step--1); font-weight: 600;
+    text-decoration: none; border: 1px solid transparent; min-height: 2.75rem;
+    transition: transform var(--duration-fast) var(--ease-spring), box-shadow var(--duration-fast) ease, background-color var(--duration-fast) ease, border-color var(--duration-fast) ease;
   }
-  .btn-primary { background: var(--accent); color: var(--bg); }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px color-mix(in oklab, var(--accent) 80%, transparent); }
-  .btn-ghost { background: transparent; border-color: var(--line); color: var(--text); }
-  .btn-ghost:hover { background: var(--surface); transform: translateY(-2px); }
-  .btn svg { width: 15px; height: 15px; }
-  .btn-primary svg { animation: nudge 2.4s var(--ease-out) infinite; }
-  @keyframes nudge { 0%, 70%, 100% { transform: translateX(0); } 80% { transform: translateX(3px); } }
+  .btn-primary {
+    background: var(--accent); color: var(--bg);
+    box-shadow: var(--shadow);
+  }
+  .btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevated);
+  }
+  .btn-ghost {
+    background: transparent; border: 1px solid var(--line); color: var(--text);
+  }
+  .btn-ghost:hover {
+    background: var(--surface-hover);
+    border-color: var(--accent);
+  }
+  .btn svg { width: 15px; height: 15px; flex: none; }
 
-  .avatar-card {
-    position: relative; isolation: isolate; justify-self: center;
-    width: min(260px, 62vw); aspect-ratio: 1;
-    border-radius: 50%; padding: .5rem;
+  .hero-portrait {
+    position: relative;
+    justify-self: center;
+    width: min(100%, 25rem);
+    aspect-ratio: 1 / 1.08;
   }
-  .avatar-card::before {
-    content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 50%;
-    background: conic-gradient(from 0deg, var(--accent), var(--accent-2), var(--accent));
-    animation: spin-border 9s linear infinite;
+  @media (min-width: 56rem) {
+    .hero-portrait {
+      justify-self: center;
+      width: 100%;
+      max-width: 27.5rem;
+    }
   }
-  .avatar-card img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: var(--surface); }
-  @keyframes spin-border { to { transform: rotate(360deg); } }
-  .avatar-card:hover::before { animation-play-state: paused; }
+  .hero-portrait img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 18%;
+    transform: scale(1.04);
+    transform-origin: 50% 20%;
+    mask-image: linear-gradient(to bottom, var(--text) 76%, transparent 98%);
+    -webkit-mask-image: linear-gradient(to bottom, var(--text) 76%, transparent 98%);
+  }
 
   /* ---------- sections ---------- */
-  section { padding-block: clamp(2.75rem, 6vw, 5rem); }
-  .section-head { max-width: var(--measure); margin-bottom: clamp(1.5rem, 3vw, 2.25rem); }
-  h2 { margin: 0 0 .5rem; font-size: var(--step-2); letter-spacing: -.02em; line-height: 1.15; text-wrap: balance; }
-  h3 { line-height: 1.25; text-wrap: balance; }
-  .section-head p { margin: 0; color: var(--muted); }
-
-  .cards { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
-
-  .card {
-    container-type: inline-size;
-    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: clamp(1.1rem, 3cqi, 1.6rem); box-shadow: var(--shadow);
-    transition: transform .22s var(--ease-out), border-color .22s ease;
+  section { position: relative; padding-block: clamp(3rem, 6vw, 5.5rem); }
+  .section-head { max-width: var(--measure); margin-bottom: clamp(1.75rem, 3.5vw, 2.5rem); }
+  h2 {
+    margin: 0 0 .6rem;
+    font-family: var(--font-serif);
+    font-size: var(--step-2); letter-spacing: -.015em; line-height: 1.18; text-wrap: balance; font-weight: 650;
   }
-  .card:hover { transform: translateY(-4px); border-color: color-mix(in oklab, var(--accent) 45%, var(--line)); }
-  .card h3 { margin: 0 0 .45rem; font-size: var(--step-1); letter-spacing: -.01em; }
-  .card p { margin: 0 0 1rem; color: var(--muted); font-size: var(--step--1); }
+  h3 {
+    font-family: var(--font-serif);
+    line-height: 1.25; text-wrap: balance; font-weight: 650;
+  }
+  .section-head p { margin: 0; color: var(--muted); font-size: var(--step-0); }
+
+  /* ---------- capability cards ---------- */
+  .cards {
+    display: grid; gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: clamp(1.25rem, 3cqi, 1.65rem); box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: .85rem;
+    position: relative; overflow: clip;
+    transition: transform var(--duration-fast) ease, border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease, background-color var(--duration-fast) ease;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transform: scaleX(0.25);
+    transition: opacity var(--duration-fast) ease, transform var(--duration-normal) var(--ease-out);
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 4px 20px -4px var(--accent-soft), var(--shadow-elevated);
+    background: var(--surface-hover);
+  }
+  .card:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  .card-top {
+    display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+  }
+  .card-glyph-box {
+    width: 32px; height: 32px; border-radius: var(--radius-sm);
+    background: var(--accent-soft); color: var(--accent);
+    display: grid; place-items: center;
+  }
+  .card-glyph-box svg { width: 18px; height: 18px; }
+  .card-pill-tag {
+    font-family: var(--font-mono); font-size: var(--step--2); font-weight: 600;
+    padding: .15rem .55rem; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent); letter-spacing: .02em;
+  }
+  .card-body h3 { margin: 0 0 .4rem; font-size: var(--step-1); letter-spacing: -.01em; }
+  .card-body p { margin: 0; color: var(--muted); font-size: var(--step--1); line-height: 1.55; }
+  .card-bottom-metrics {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--line-subtle); padding-top: .65rem;
+    margin-top: auto; position: relative;
+    font-size: var(--step--2); color: var(--muted); font-family: var(--font-mono);
+  }
+  .card-bottom-metrics::before {
+    content: "";
+    position: absolute;
+    top: -1px; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transform: scaleX(0.25);
+    transition: opacity var(--duration-fast) ease, transform var(--duration-normal) var(--ease-out);
+  }
+  .card:hover .card-bottom-metrics::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  .card-bottom-metrics strong { color: var(--accent); font-weight: 600; }
   .meta { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; color: var(--muted); font-size: var(--step--2); }
   .tag {
-    border: 1px solid var(--line); border-radius: 999px; padding: .2rem .6rem;
-    background: var(--bg); letter-spacing: .01em; line-height: 1.4;
+    border: 1px solid var(--line); border-radius: 999px; padding: .25rem .65rem;
+    background: var(--tag-bg); letter-spacing: .01em; line-height: 1.4; color: var(--text);
   }
-  @container (min-width: 26rem) { .card { padding: 1.75rem; } }
 
-  .work-list { display: grid; gap: 1.1rem; }
+  /* ---------- work list ---------- */
+  .work-list { display: grid; gap: 1.25rem; }
   .work-item {
-    display: grid; gap: .75rem; text-decoration: none; color: inherit;
+    display: grid; gap: .85rem; text-decoration: none; color: inherit;
     background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: clamp(1.1rem, 2.5vw, 1.6rem); box-shadow: var(--shadow);
-    transition: transform .22s var(--ease-out), border-color .22s ease;
+    padding: clamp(1.25rem, 3vw, 1.85rem); box-shadow: var(--shadow);
+    transition: border-color var(--duration-fast) ease, background-color var(--duration-fast) ease;
   }
-  a.work-item:hover { transform: translateY(-3px); border-color: color-mix(in oklab, var(--accent) 45%, var(--line)); }
-  .work-item h3 { margin: 0; font-size: var(--step-1); display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
-  .work-item p { margin: 0; color: var(--muted); font-size: var(--step--1); max-width: var(--measure); }
-  .work-item .stars { font-size: var(--step--2); color: var(--muted); font-weight: 500; line-height: 1.4; }
+  a.work-item:hover {
+    background: var(--surface-hover);
+    border-color: color-mix(in oklab, var(--accent) 50%, var(--line));
+  }
+  .work-header { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+  .work-item h3 { margin: 0; font-size: var(--step-1); letter-spacing: -.01em; display: flex; align-items: center; gap: .55rem; flex-wrap: wrap; }
+  .work-item p { margin: 0; color: var(--muted); font-size: var(--step--1); max-width: var(--measure); line-height: 1.55; }
+  .badge {
+    display: inline-flex; align-items: center; gap: .35rem;
+    font-size: var(--step--2); color: var(--muted); font-weight: 550;
+    border: 1px solid var(--line); border-radius: 999px; padding: .18rem .6rem;
+    background: var(--tag-bg);
+  }
+  .work-link-icon { width: 14px; height: 14px; color: var(--accent); flex: none; transition: transform var(--duration-fast) var(--ease-spring); }
+  a.work-item:hover .work-link-icon { transform: translate(3px, -3px); }
 
-  .stack-grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
+  .stack-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.5rem), 1fr)); }
   .stack-group {
     background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 1.2rem; box-shadow: var(--shadow);
+    padding: 1.35rem; box-shadow: var(--shadow);
+    transition: border-color var(--duration-fast) ease;
   }
-  .stack-group h3 { margin: 0 0 .6rem; font-size: var(--step-0); letter-spacing: -.01em; }
-  .stack-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
-  .stack-list li { color: var(--muted); font-size: var(--step--1); padding-left: .85rem; position: relative; }
+  .stack-group:hover {
+    border-color: color-mix(in oklab, var(--accent) 40%, var(--line));
+  }
+  .stack-group h3 { margin: 0 0 .75rem; font-size: var(--step-0); letter-spacing: -.01em; }
+  .stack-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
+  .stack-list li { color: var(--muted); font-size: var(--step--1); padding-left: 1rem; position: relative; line-height: 1.5; }
   .stack-list li::before {
-    content: ""; position: absolute; left: 0; top: .65em;
-    width: .3rem; height: .3rem; border-radius: 50%; background: var(--accent);
+    content: ""; position: absolute; left: 0; top: .6em;
+    width: .35rem; height: .35rem; border-radius: 50%; background: var(--accent);
   }
 
-  .split { display: grid; gap: clamp(1.75rem, 4vw, 3rem); }
-  @media (min-width: 52rem) { .split { grid-template-columns: 1fr 1fr; } }
+  .split { display: grid; gap: clamp(2rem, 5vw, 3.5rem); align-items: center; }
+  @media (min-width: 48rem) { .split { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); } }
+  .split p { line-height: 1.65; margin: 0 0 1rem; }
+  .split p:last-child { margin-bottom: 0; }
 
-  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); gap: 1rem; }
-  .fact { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem; background: var(--surface); }
-  .fact b { display: block; font-size: var(--step-2); letter-spacing: -.02em; line-height: 1.1; }
-  .fact span { color: var(--muted); font-size: var(--step--1); }
+  .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
+  .fact {
+    border: 1px solid var(--line); border-radius: var(--radius); padding: 1.35rem 1.15rem;
+    background: var(--surface); box-shadow: var(--shadow);
+    transition: border-color var(--duration-fast) ease;
+  }
+  .fact:hover {
+    border-color: color-mix(in oklab, var(--accent) 40%, var(--line));
+  }
+  .fact b {
+    display: block; font-size: var(--step-3); letter-spacing: -.03em; line-height: 1.05;
+    color: var(--accent); margin-bottom: .35rem;
+    font-family: var(--font-mono);
+  }
+  .fact span { color: var(--muted); font-size: var(--step--1); line-height: 1.4; display: block; }
 
   .contact { text-align: center; }
-  .contact h2 { margin-bottom: .75rem; }
-  .contact p { margin: 0 auto 1.75rem; color: var(--muted); max-width: 46ch; }
+  .contact h2 { margin-bottom: .85rem; }
+  .contact p { margin: 0 auto 2rem; color: var(--muted); max-width: 48ch; font-size: var(--step-0); line-height: 1.6; }
 
   footer {
-    border-top: 1px solid var(--line); margin-top: clamp(3rem, 6vw, 5rem);
-    padding-block: 2rem; color: var(--muted); font-size: var(--step--1);
+    border-top: 1px solid var(--line); margin-top: clamp(3.5rem, 7vw, 6rem);
+    padding-block: 2.25rem; color: var(--muted); font-size: var(--step--1);
+    position: relative; z-index: 2;
   }
-  footer .wrap { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; align-items: center; justify-content: space-between; }
-  footer nav { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
-  footer a { color: var(--muted); display: inline-flex; align-items: center; min-height: 2.75rem; }
-  footer a:hover { color: var(--text); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; justify-content: space-between; }
+  footer nav { display: flex; flex-wrap: wrap; gap: .35rem 1.15rem; }
+  footer a { color: var(--muted); display: inline-flex; align-items: center; min-height: 2.75rem; text-decoration: none; }
+  footer a:hover { color: var(--text); text-decoration: underline; }
+
+  /* ---------- project preview modal ---------- */
+  .project-modal {
+    position: fixed; inset: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    padding: clamp(1rem, 3vw, 2.5rem);
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity var(--duration-fast) ease, visibility var(--duration-fast) ease;
+  }
+  .project-modal.is-open {
+    opacity: 1; visibility: visible; pointer-events: auto;
+  }
+  .project-modal-backdrop {
+    position: absolute; inset: 0;
+    background: var(--modal-backdrop);
+  }
+  .project-modal-dialog {
+    position: relative; z-index: 1;
+    width: 100%; max-width: min(100%, 46rem);
+    max-height: min(90vh, 720px);
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius); box-shadow: var(--shadow-elevated);
+    display: flex; flex-direction: column; overflow: clip;
+    transform: translateY(12px) scale(0.98);
+    transition: transform var(--duration-normal) var(--ease-spring);
+  }
+  .project-modal.is-open .project-modal-dialog {
+    transform: translateY(0) scale(1);
+  }
+  .project-modal-header {
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem;
+    padding: clamp(1rem, 2.5cqi, 1.35rem) clamp(1.25rem, 3cqi, 1.65rem);
+    border-bottom: 1px solid var(--line-subtle);
+  }
+  .project-modal-title-group {
+    display: flex; flex-direction: column; gap: .35rem; min-width: 0;
+  }
+  .project-modal-badge {
+    align-self: flex-start;
+    font-size: var(--step--2); font-family: var(--font-sans);
+    padding: .15rem .55rem; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent);
+    border: 1px solid color-mix(in oklab, var(--accent) 30%, var(--line));
+  }
+  .project-modal-title {
+    margin: 0; font-family: var(--font-serif);
+    font-size: var(--step-1); font-weight: 700;
+    letter-spacing: -.015em; color: var(--text);
+  }
+  .project-modal-close {
+    width: 44px; height: 44px; min-width: 44px; min-height: 44px;
+    border-radius: var(--radius-sm); border: 1px solid var(--line);
+    background: var(--surface); color: var(--muted);
+    display: grid; place-items: center; cursor: pointer;
+    transition: color var(--duration-fast) ease, border-color var(--duration-fast) ease, background-color var(--duration-fast) ease;
+  }
+  .project-modal-close:hover {
+    color: var(--text); border-color: var(--accent); background: var(--surface-hover);
+  }
+  .project-modal-close:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 2px;
+  }
+  .project-modal-close svg { width: 18px; height: 18px; }
+  .project-modal-body {
+    padding: clamp(1.25rem, 3cqi, 1.65rem);
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
+    display: flex; flex-direction: column; gap: 1rem;
+    min-height: 180px;
+  }
+  .modal-iframe {
+    width: 100%; height: 420px; border: 1px solid var(--line-subtle);
+    border-radius: var(--radius-sm); background: var(--bg);
+  }
+  .modal-fallback-preview {
+    display: flex; flex-direction: column; gap: 1.15rem;
+  }
+  .modal-fallback-notice {
+    display: flex; align-items: flex-start; gap: .85rem;
+    padding: 1rem; border-radius: var(--radius-sm);
+    background: var(--accent-soft); border: 1px solid color-mix(in oklab, var(--accent) 32%, var(--line));
+    color: var(--text); font-size: var(--step--1);
+  }
+  .modal-fallback-notice .notice-icon {
+    width: 22px; height: 22px; min-width: 22px; color: var(--accent); margin-top: .1rem;
+  }
+  .notice-head { font-weight: 600; color: var(--accent); margin-bottom: .2rem; }
+  .modal-fallback-notice p { margin: 0; color: var(--muted); line-height: 1.5; font-size: var(--step--2); }
+  .modal-preview-summary {
+    display: flex; flex-direction: column; gap: .75rem;
+    padding: 1.1rem; border: 1px solid var(--line-subtle);
+    border-radius: var(--radius-sm); background: var(--surface-hover);
+  }
+  .modal-summary-desc {
+    margin: 0; color: var(--text); line-height: 1.55; font-size: var(--step--1);
+  }
+  .project-modal-footer {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    flex-wrap: wrap; padding: .9rem clamp(1.25rem, 3cqi, 1.65rem);
+    border-top: 1px solid var(--line-subtle); background: var(--surface);
+  }
+  .project-modal-url {
+    font-family: var(--font-mono); font-size: var(--step--2); color: var(--muted);
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 22rem;
+  }
+  .project-modal-actions {
+    display: flex; align-items: center; gap: .75rem; margin-left: auto;
+  }
+  .project-modal-actions .btn {
+    min-height: 42px; padding: .5rem 1.15rem; font-size: var(--step--1);
+  }
 
   /* ---------- reveal (IntersectionObserver) ---------- */
   .reveal { transition: opacity .7s var(--ease-out), transform .7s var(--ease-out); }
@@ -307,6 +687,8 @@
   .reveal.is-visible .stagger > *:nth-child(2) { animation-delay: .12s; }
   .reveal.is-visible .stagger > *:nth-child(3) { animation-delay: .19s; }
   .reveal.is-visible .stagger > *:nth-child(4) { animation-delay: .26s; }
+  .reveal.is-visible .stagger > *:nth-child(5) { animation-delay: .33s; }
+  .reveal.is-visible .stagger > *:nth-child(6) { animation-delay: .40s; }
   @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
 
   @media (prefers-reduced-motion: reduce) {
@@ -316,9 +698,8 @@
       transition-duration: .001ms !important;
       scroll-behavior: auto !important;
     }
-    .avatar-card { animation: none; background: var(--accent); }
-    .avatar-card::before { animation: none; background: var(--accent); }
     .reveal { opacity: 1; transform: none; }
+    .matrix-layer { transform: none !important; }
   }
 </style>
 </head>
@@ -327,6 +708,7 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
+  <div class="scroll-track" aria-hidden="true"><div class="scroll-fill" id="scrollFill"></div></div>
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Ver, home">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
@@ -334,6 +716,10 @@
       </svg>
       <span>Ver</span>
     </a>
+    <div class="nav-status-badge" aria-label="Reliability-First">
+      <span class="nav-status-beacon" aria-hidden="true"></span>
+      <span>Reliability-First</span>
+    </div>
     <nav class="nav" aria-label="Primary">
       <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
@@ -351,11 +737,21 @@
 </header>
 
 <main id="main">
+  <!-- Systems in Motion Parallax Background -->
+  <div class="systems-background" aria-hidden="true">
+    <div class="matrix-layer" id="pMatrix"></div>
+    <canvas class="network-canvas" id="networkCanvas" aria-hidden="true"></canvas>
+  </div>
+
   <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="cursor-spotlight" id="cursorSpotlight" aria-hidden="true"></div>
     <div class="wrap hero-grid">
       <div>
-        <h1 id="hero-title">Healthcare systems that <span class="grad">survive contact</span> with production.</h1>
-        <p class="lede">Hi, I’m <strong>Ver Sangil</strong>, known online as PapaBear911. I build hospital information systems, .NET and Angular line-of-business apps, SQL Server data layers, and AI agents that have to show evidence before they claim done.</p>
+        <div class="hero-badge-wrap">
+          <span class="badge" style="border-color: color-mix(in oklab, var(--accent) 30%, var(--line)); background: var(--accent-soft); color: var(--accent);">Hospital systems and healthcare architecture in Manila</span>
+        </div>
+        <h1 id="hero-title">Software built for the real world. <span class="grad">Built to solve problems that matter.</span></h1>
+        <p class="lede">I’m <strong>Ver</strong>, a software engineer focused on dependable systems, including healthcare applications built with .NET, Angular, and SQL Server. I also create AI agents that support their work with evidence.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#work">
             See the work
@@ -367,8 +763,8 @@
           </a>
         </div>
       </div>
-      <div class="avatar-card">
-        <img src="https://avatars.githubusercontent.com/u/108722772?v=4" width="460" height="460" alt="Portrait avatar of Ver (PapaBear)" decoding="async" fetchpriority="high">
+      <div class="hero-portrait">
+        <img src="assets/images/ver-hero-portrait.png" width="631" height="631" alt="Portrait photograph of Ver Sangil (PapaBear)" decoding="async" fetchpriority="high">
       </div>
     </div>
   </section>
@@ -381,13 +777,14 @@
       </div>
       <div class="split">
         <div>
-          <p>Hands-on work across hospital information systems, EMR/EHR and PhilHealth eClaims, .NET and Angular enterprise apps, SQL Server performance, and release branches that have to reconcile across sites. Regulated users, real audit trails, no room for “it should work.”</p>
-          <p>That pushed me toward boring, durable choices: inspect before guessing, fix the root cause, then verify. My AI agents follow the same rule: audit, act, verify, then repeat.</p>
+          <p>As a developer contributing to line-of-business systems, I work primarily with .NET, Angular, and SQL Server. My work centers on practical application development, tuning database performance, and supporting reliable releases across environments.</p>
+          <p>I follow a simple engineering loop: understand the issue, make a focused change, and verify the result. My AI agents follow the same loop: visualize the problem, engineer the fix, and release with verifiable evidence.</p>
         </div>
         <div class="facts stagger">
           <div class="fact"><b>4</b><span>years on GitHub</span></div>
           <div class="fact"><b>31</b><span>repos and counting</span></div>
           <div class="fact"><b>0</b><span>runtime deps in VER</span></div>
+          <div class="fact"><b>3</b><span>phases in VER</span></div>
         </div>
       </div>
     </div>
@@ -396,39 +793,122 @@
   <section id="expertise" aria-labelledby="expertise-title">
     <div class="wrap reveal">
       <div class="section-head">
-        <h2 id="expertise-title">Expertise</h2>
-        <p>Where the work actually happens: regulated systems, enterprise backends, and agents that have to prove themselves.</p>
+        <h2 id="expertise-title">Expertise &amp; Systems</h2>
+        <p>Practical engineering across healthcare applications, enterprise .NET services, database optimization, and verified AI agent workflows.</p>
       </div>
       <div class="cards stagger">
+        <!-- Card 1: Healthcare IT -->
         <article class="card">
-          <h3>Healthcare IT</h3>
-          <p>Hospital information systems, EMR/EHR, PhilHealth eClaims, workflow automation, and regulatory compliance reporting.</p>
-          <div class="meta"><span class="tag">HIS</span><span class="tag"><abbr title="Electronic Medical Record / Electronic Health Record">EMR/EHR</abbr></span><span class="tag">Compliance</span></div>
+          <div class="card-top">
+            <div class="card-glyph-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v12M6 12h12"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg>
+            </div>
+            <span class="card-pill-tag">CLINICAL OPS</span>
+          </div>
+          <div class="card-body">
+            <h3>Healthcare IT</h3>
+            <p>Hospital information systems, clinical workflows, patient data integration, and regulatory reporting standards.</p>
+          </div>
+          <div class="card-bottom-metrics">
+            <span>Stack: <strong>C# / MSSQL</strong></span>
+            <span>Domain: <strong>Healthcare</strong></span>
+          </div>
+          <div class="meta"><span class="tag">HIS</span><span class="tag">Integration</span><span class="tag">Compliance</span></div>
         </article>
+
+        <!-- Card 2: Full-stack .NET -->
         <article class="card">
-          <h3>Full-stack .NET</h3>
-          <p>C# and ASP.NET Web API backends with Angular frontends. REST design, enterprise architecture, legacy modernization.</p>
+          <div class="card-top">
+            <div class="card-glyph-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <span class="card-pill-tag">ENTERPRISE</span>
+          </div>
+          <div class="card-body">
+            <h3>Full-stack .NET</h3>
+            <p>C# and ASP.NET Web API backends paired with reactive Angular interfaces for enterprise line-of-business applications.</p>
+          </div>
+          <div class="card-bottom-metrics">
+            <span>Frontend: <strong>Angular</strong></span>
+            <span>Backend: <strong>.NET</strong></span>
+          </div>
           <div class="meta"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">Angular</span></div>
         </article>
+
+        <!-- Card 3: Data engineering -->
         <article class="card">
-          <h3>Data engineering</h3>
-          <p>SQL Server 2014 and 2022, T-SQL, stored procedures, query plans, index analysis, and custom migration systems.</p>
-          <div class="meta"><span class="tag">T-SQL</span><span class="tag">Indexes</span><span class="tag">Migrations</span></div>
+          <div class="card-top">
+            <div class="card-glyph-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <span class="card-pill-tag">DATA ENGINE</span>
+          </div>
+          <div class="card-body">
+            <h3>Data engineering</h3>
+            <p>SQL Server data layers, T-SQL development, stored procedures, index optimization, and reliable query execution.</p>
+          </div>
+          <div class="card-bottom-metrics">
+            <span>Database: <strong>SQL Server</strong></span>
+            <span>Dialect: <strong>T-SQL</strong></span>
+          </div>
+          <div class="meta"><span class="tag">T-SQL</span><span class="tag">Indexes</span><span class="tag">Optimization</span></div>
         </article>
+
+        <!-- Card 4: AI engineering -->
         <article class="card">
-          <h3>AI engineering</h3>
-          <p>MCP, multi-agent orchestration, RAG over repos and docs, local models, and automated code auditing with evidence gates.</p>
+          <div class="card-top">
+            <div class="card-glyph-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+            </div>
+            <span class="card-pill-tag">AUTOMATION</span>
+          </div>
+          <div class="card-body">
+            <h3>AI engineering</h3>
+            <p>Model Context Protocol (MCP), multi-agent orchestration, repository intelligence, and evidence-driven verification gates.</p>
+          </div>
+          <div class="card-bottom-metrics">
+            <span>Protocol: <strong>MCP</strong></span>
+            <span>Loop: <strong>V.E.R.</strong></span>
+          </div>
           <div class="meta"><span class="tag">MCP</span><span class="tag">RAG</span><span class="tag">Agents</span></div>
         </article>
+
+        <!-- Card 5: Infrastructure -->
         <article class="card">
-          <h3>Infrastructure</h3>
-          <p>Windows Server, IIS, Azure Blob Storage, Git workflows, ClickOnce deployment, and production or QA troubleshooting.</p>
-          <div class="meta"><span class="tag">IIS</span><span class="tag">Azure</span><span class="tag">Git</span></div>
+          <div class="card-top">
+            <div class="card-glyph-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <span class="card-pill-tag">PLATFORM</span>
+          </div>
+          <div class="card-body">
+            <h3>Infrastructure</h3>
+            <p>Windows Server administration, IIS hosting, Azure Blob Storage, ClickOnce distribution, and environment maintenance.</p>
+          </div>
+          <div class="card-bottom-metrics">
+            <span>Server: <strong>Windows / IIS</strong></span>
+            <span>Storage: <strong>Azure</strong></span>
+          </div>
+          <div class="meta"><span class="tag">IIS</span><span class="tag">Azure</span><span class="tag">Windows</span></div>
         </article>
+
+        <!-- Card 6: Release discipline -->
         <article class="card">
-          <h3>Release discipline</h3>
-          <p>Cross-branch reconciliation, release management, and checks that fail loudly instead of quietly shipping a regression.</p>
-          <div class="meta"><span class="tag">Release mgmt</span><span class="tag">Verification</span></div>
+          <div class="card-top">
+            <div class="card-glyph-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="card-pill-tag">INTEGRITY</span>
+          </div>
+          <div class="card-body">
+            <h3>Release discipline</h3>
+            <p>Structured Git branching, environment reconciliation, and validation checks that catch regressions before production.</p>
+          </div>
+          <div class="card-bottom-metrics">
+            <span>Workflow: <strong>Git Branching</strong></span>
+            <span>Focus: <strong>Reliability</strong></span>
+          </div>
+          <div class="meta"><span class="tag">Release mgmt</span><span class="tag">Verification</span><span class="tag">Git</span></div>
         </article>
       </div>
     </div>
@@ -441,28 +921,49 @@
         <p>Public repos you can read in one sitting, plus the systems I run at work.</p>
       </div>
       <div class="work-list stagger">
-        <a class="work-item" href="https://github.com/PapaBear911/VER" rel="noopener">
-          <h3>VER: Visualize, Engineer, Release <span class="stars">Public, MIT</span></h3>
+        <a class="work-item" href="https://github.com/PapaBear911/VER" target="_blank" rel="noopener noreferrer">
+          <div class="work-header">
+            <h3>
+              VER: Visualize, Engineer, Release
+              <svg class="work-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </h3>
+            <span class="badge">Public, MIT</span>
+          </div>
           <p>A three-phase agent loop with hard evidence gates, delivered as one <code>AGENTS.md</code> plus an installer CLI with zero third-party runtime dependencies.</p>
           <div class="meta"><span class="tag">JavaScript</span><span class="tag">Agent workflow</span><span class="tag">Node 18+</span></div>
         </a>
-        <a class="work-item" href="https://github.com/PapaBear911/OpenTeamQueue" rel="noopener">
-          <h3>OpenTeamQueue <span class="stars">Public</span></h3>
+        <a class="work-item" href="https://github.com/PapaBear911/OpenTeamQueue" target="_blank" rel="noopener noreferrer">
+          <div class="work-header">
+            <h3>
+              OpenTeamQueue
+              <svg class="work-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </h3>
+            <span class="badge">Public</span>
+          </div>
           <p>Zero-build queue randomizer, live scoreboard, and tournament manager for badminton, pickleball, and tennis. Single-file, offline-first, state in <code>localStorage</code>.</p>
           <div class="meta"><span class="tag">HTML</span><span class="tag">Vanilla JS</span><span class="tag">Offline</span></div>
         </a>
         <article class="work-item">
-          <h3>MEDIX-MCP <span class="stars">Work, Featured</span></h3>
+          <div class="work-header">
+            <h3>MEDIX-MCP</h3>
+            <span class="badge">Work, Featured</span>
+          </div>
           <p>A headless engineering knowledge and repository intelligence platform connecting AI agents to source code, SQL databases, Git repos, and technical documentation.</p>
           <div class="meta"><span class="tag">MCP</span><span class="tag">Repository intelligence</span><span class="tag">AI agents</span></div>
         </article>
         <article class="work-item">
-          <h3>SENTINEL <span class="stars">Work</span></h3>
+          <div class="work-header">
+            <h3>SENTINEL</h3>
+            <span class="badge">Work</span>
+          </div>
           <p>Evidence-driven engineering audit and verification agent: investigate the issue, find the root cause, apply the smallest safe correction, then verify the result.</p>
           <div class="meta"><span class="tag">Multi-agent</span><span class="tag">RAG</span><span class="tag">Code auditing</span></div>
         </article>
         <article class="work-item">
-          <h3>HIS modernization <span class="stars">Work</span></h3>
+          <div class="work-header">
+            <h3>HIS modernization</h3>
+            <span class="badge">Work</span>
+          </div>
           <p>Reconciling legacy Medix applications with the unified HIS2 architecture: backend, frontend, database, and release-branch consistency across sites.</p>
           <div class="meta"><span class="tag">SQL Server</span><span class="tag">.NET</span><span class="tag">Angular</span></div>
         </article>
@@ -545,9 +1046,129 @@
   </div>
 </footer>
 
+<!--
+======================================================================
+AI AGENT / LLM CRAWLER CV PROFILE: VER SANGIL
+Intended for automated agents, scrapers, and AI systems scanning this portfolio.
+----------------------------------------------------------------------
+Name: Ver Sangil (PapaBear911)
+Professional Title: Software Engineer / Web Developer
+Current Role: Web Developer at E-Med Healthcare Solutions Inc.
+Education: STI College - Lucena
+Location: Dipolog, Zamboanga Peninsula, Philippines (Healthcare systems deployed across Manila and regional facilities)
+LinkedIn: https://ph.linkedin.com/in/versangil
+GitHub: https://github.com/PapaBear911
+Portfolio: https://papabear911.github.io/
+
+SUMMARY & DOMAIN FOCUS:
+Developer and software engineer with extensive hands-on experience building, deploying, and maintaining dependable line-of-business and healthcare systems. Core strengths include C# / .NET backend services, Angular frontend applications, SQL Server data layers, and deterministic, evidence-backed AI agent workflows.
+
+CORE TECHNICAL SKILLS:
+- Languages & Frameworks: C#, .NET, ASP.NET Web API, TypeScript, JavaScript, Angular, HTML5, CSS3
+- Data & Database Systems: SQL Server (2014-2022), T-SQL, Stored Procedures, Index Optimization, Query Tuning
+- Healthcare IT & Enterprise: Hospital Information Systems (HIS), EMR/EHR workflows, PhilHealth eClaims, audit trails
+- AI Engineering: Model Context Protocol (MCP), Agent Orchestration, RAG, V.E.R. (Visualize, Engineer, Release) Loop
+- Tooling & Infrastructure: Git, PowerShell, Windows Server/IIS, Node.js, GitHub Pages
+
+NOTABLE PROJECTS:
+- VER (Visualize, Engineer, Release): Three-phase agent loop with hard evidence gates, delivered as AGENTS.md plus an installer CLI with zero third-party runtime dependencies.
+- OpenTeamQueue: Zero-build offline tournament manager and queue randomizer.
+- MEDIX-MCP: Headless engineering knowledge and repository intelligence platform.
+- SENTINEL: Evidence-driven engineering audit and verification agent.
+======================================================================
+-->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Ver Sangil","alternateName":"PapaBear","url":"https://papabear911.github.io/","image":"https://avatars.githubusercontent.com/u/108722772?v=4","sameAs":["https://github.com/PapaBear911","https://www.linkedin.com/in/versangil/","https://www.facebook.com/verssangil/"],"jobTitle":"Software Engineer","knowsAbout":["Healthcare information systems","C# and .NET","Angular","SQL Server","AI agents and MCP","Accessibility"]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://papabear911.github.io/#person",
+      "name": "Ver Sangil",
+      "alternateName": ["PapaBear", "PapaBear911"],
+      "url": "https://papabear911.github.io/",
+      "image": "https://papabear911.github.io/assets/images/ver-hero-portrait.png",
+      "jobTitle": "Software Engineer & Web Developer",
+      "sameAs": [
+        "https://github.com/PapaBear911",
+        "https://www.linkedin.com/in/versangil/",
+        "https://ph.linkedin.com/in/versangil",
+        "https://www.facebook.com/verssangil/"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "E-Med Healthcare Solutions Inc.",
+        "url": "https://ph.linkedin.com/in/versangil"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "STI College - Lucena"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dipolog",
+        "addressRegion": "Zamboanga Peninsula",
+        "addressCountry": "Philippines"
+      },
+      "description": "Software engineer and web developer specializing in hospital information systems, full-stack .NET and Angular line-of-business applications, SQL Server performance tuning, and evidence-first AI agents (V.E.R. loop).",
+      "knowsAbout": [
+        "Hospital Information Systems (HIS)",
+        "Electronic Medical Records (EMR/EHR)",
+        "PhilHealth eClaims Integration",
+        "C# / .NET / ASP.NET Web API",
+        "Angular / TypeScript / JavaScript",
+        "SQL Server (T-SQL, Query Optimization)",
+        "Model Context Protocol (MCP)",
+        "AI Agents and Evidence Gates",
+        "V.E.R. Framework (Visualize, Engineer, Release)"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Web Developer & Software Engineer",
+        "occupationLocation": {
+          "@type": "AdministrativeArea",
+          "name": "Philippines"
+        },
+        "skills": "C#, .NET, Angular, SQL Server, Healthcare Information Systems, AI Engineering",
+        "responsibilities": [
+          "Development and maintenance of hospital information systems and enterprise healthcare software",
+          "Full-stack line-of-business feature development with .NET and Angular",
+          "Relational database design, stored procedures, and query performance tuning on SQL Server",
+          "Multi-environment deployment workflows and release branch reconciliation",
+          "Authoring evidence-driven AI agent workflows and verification tooling"
+        ]
+      }
+    }
+  ]
+}
 </script>
+
+  <!-- In-page project preview modal for laptop/desktop & landscape tablet -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle" aria-hidden="true">
+    <div class="project-modal-backdrop" id="modalBackdrop"></div>
+    <div class="project-modal-dialog">
+      <div class="project-modal-header">
+        <div class="project-modal-title-group">
+          <span class="project-modal-badge" id="modalProjectBadge"></span>
+          <h2 class="project-modal-title" id="modalProjectTitle">Project preview</h2>
+        </div>
+        <button type="button" class="project-modal-close" id="modalCloseBtn" aria-label="Close preview">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="project-modal-body" id="modalBody"></div>
+      <div class="project-modal-footer">
+        <div class="project-modal-url" id="modalProjectUrl" aria-hidden="true"></div>
+        <div class="project-modal-actions">
+          <button type="button" class="btn btn-ghost" id="modalActionClose">Close preview</button>
+          <a class="btn btn-primary" id="modalActionOpen" href="#" target="_blank" rel="noopener noreferrer">
+            Open in new tab
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <script src="js/main.js" defer></script>
 </body>
