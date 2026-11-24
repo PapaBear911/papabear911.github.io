@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ver â€” PapaBear's Animated Personal Page</title>
-<meta name="description" content="Ver (PapaBear). I build agent workflows, zero-build apps, and developer tooling. VER, OpenTeamQueue, and more.">
+<title>Ver Sangil — Healthcare IT, full-stack &amp; AI engineering</title>
+<meta name="description" content="Ver Sangil (PapaBear911). Healthcare systems, .NET/Angular full-stack, SQL Server, and AI engineering: evidence-driven agents that verify before they claim done.">
 <meta name="color-scheme" content="light dark">
 <script>document.documentElement.classList.add('js');</script>
 <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
@@ -13,14 +13,16 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Ver â€” PapaBear">
-<meta property="og:description" content="I build agent workflows, zero-build apps, and developer tooling.">
+<meta property="og:title" content="Ver Sangil">
+<meta property="og:description" content="Healthcare IT, full-stack .NET/Angular, SQL Server, and AI engineering. Audit, act, verify.">
 <meta property="og:url" content="https://papabear911.github.io/">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/108722772?v=4">
+<meta property="og:image:alt" content="Ver's GitHub avatar">
 <meta property="profile:first_name" content="Ver">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ver â€” PapaBear">
-<meta name="twitter:description" content="I build agent workflows, zero-build apps, and developer tooling.">
+<meta property="profile:username" content="PapaBear911">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ver Sangil">
+<meta name="twitter:description" content="Healthcare IT, full-stack .NET/Angular, SQL Server, and AI engineering. Audit, act, verify.">
 <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/108722772?v=4">
 
 <style>
@@ -35,13 +37,14 @@
     --accent-soft: #e8efff;
     --shadow: 0 1px 2px rgb(16 24 40 / 6%), 0 12px 32px -12px rgb(16 24 40 / 18%);
 
+    --step--2: clamp(0.78rem, 0.77rem + 0.05vw, 0.82rem);
     --step--1: clamp(0.88rem, 0.86rem + 0.1vw, 0.95rem);
     --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.12rem);
     --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
     --step-2: clamp(1.5rem, 1.25rem + 1.2vw, 2.1rem);
     --step-3: clamp(2rem, 1.4rem + 3vw, 3.6rem);
     --fluid-gap: clamp(1rem, 0.5rem + 2vw, 2rem);
-    --measure: 62ch;
+    --measure: 68ch;
     --radius: 14px;
     --ease-out: cubic-bezier(.22, 1, .36, 1);
   }
@@ -95,7 +98,6 @@
     color: var(--text);
     font: var(--step-0)/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
   }
 
   img, svg { display: block; max-width: 100%; }
@@ -142,8 +144,8 @@
 
   code {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: .9em; background: var(--accent-soft); color: inherit;
-    padding: .1em .35em; border-radius: 5px;
+    font-size: .94em; background: var(--accent-soft); color: var(--text);
+    padding: .1em .35em; border-radius: 5px; font-synthesis: none;
   }
 
   .theme-toggle {
@@ -174,18 +176,6 @@
 
   .hero-grid { display: grid; gap: clamp(1.75rem, 4vw, 3.5rem); align-items: center; }
   @media (min-width: 56rem) { .hero-grid { grid-template-columns: 1.35fr .65fr; } }
-
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: .5rem;
-    font-size: var(--step--1); font-weight: 600; letter-spacing: .08em;
-    text-transform: uppercase; color: var(--muted); margin: 0 0 1rem;
-  }
-  .eyebrow::before {
-    content: ""; width: .5rem; height: .5rem; border-radius: 50%;
-    background: #22c55e; box-shadow: 0 0 0 4px color-mix(in oklab, #22c55e 22%, transparent);
-    animation: pulse 2.6s ease-in-out infinite;
-  }
-  @keyframes pulse { 50% { box-shadow: 0 0 0 8px color-mix(in oklab, #22c55e 0%, transparent); } }
 
   h1 {
     margin: 0 0 1rem;
@@ -234,6 +224,7 @@
   section { padding-block: clamp(2.75rem, 6vw, 5rem); }
   .section-head { max-width: var(--measure); margin-bottom: clamp(1.5rem, 3vw, 2.25rem); }
   h2 { margin: 0 0 .5rem; font-size: var(--step-2); letter-spacing: -.02em; line-height: 1.15; text-wrap: balance; }
+  h3 { line-height: 1.25; text-wrap: balance; }
   .section-head p { margin: 0; color: var(--muted); }
 
   .cards { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
@@ -245,15 +236,13 @@
     transition: transform .22s var(--ease-out), border-color .22s ease;
   }
   .card:hover { transform: translateY(-4px); border-color: color-mix(in oklab, var(--accent) 45%, var(--line)); }
-  .card h3 { margin: 0 0 .4rem; font-size: var(--step-1); letter-spacing: -.01em; }
+  .card h3 { margin: 0 0 .45rem; font-size: var(--step-1); letter-spacing: -.01em; }
   .card p { margin: 0 0 1rem; color: var(--muted); font-size: var(--step--1); }
-  .card .meta { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; font-size: .78rem; color: var(--muted); }
+  .meta { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; color: var(--muted); font-size: var(--step--2); }
   .tag {
-    border: 1px solid var(--line); border-radius: 999px; padding: .15rem .55rem;
-    background: var(--bg); font-size: .75rem; letter-spacing: .01em;
+    border: 1px solid var(--line); border-radius: 999px; padding: .2rem .6rem;
+    background: var(--bg); letter-spacing: .01em; line-height: 1.4;
   }
-  .card-icon { width: 2.35rem; height: 2.35rem; border-radius: 10px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); margin-bottom: 1rem; }
-  .card-icon svg { width: 1.15rem; height: 1.15rem; }
   @container (min-width: 26rem) { .card { padding: 1.75rem; } }
 
   .work-list { display: grid; gap: 1.1rem; }
@@ -263,10 +252,23 @@
     padding: clamp(1.1rem, 2.5vw, 1.6rem); box-shadow: var(--shadow);
     transition: transform .22s var(--ease-out), border-color .22s ease;
   }
-  .work-item:hover { transform: translateY(-3px); border-color: color-mix(in oklab, var(--accent) 45%, var(--line)); }
+  a.work-item:hover { transform: translateY(-3px); border-color: color-mix(in oklab, var(--accent) 45%, var(--line)); }
   .work-item h3 { margin: 0; font-size: var(--step-1); display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
-  .work-item p { margin: 0; color: var(--muted); max-width: 68ch; }
-  .work-item .stars { font-size: .78rem; color: var(--muted); font-weight: 500; }
+  .work-item p { margin: 0; color: var(--muted); font-size: var(--step--1); max-width: var(--measure); }
+  .work-item .stars { font-size: var(--step--2); color: var(--muted); font-weight: 500; line-height: 1.4; }
+
+  .stack-grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
+  .stack-group {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.2rem; box-shadow: var(--shadow);
+  }
+  .stack-group h3 { margin: 0 0 .6rem; font-size: var(--step-0); letter-spacing: -.01em; }
+  .stack-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
+  .stack-list li { color: var(--muted); font-size: var(--step--1); padding-left: .85rem; position: relative; }
+  .stack-list li::before {
+    content: ""; position: absolute; left: 0; top: .65em;
+    width: .3rem; height: .3rem; border-radius: 50%; background: var(--accent);
+  }
 
   .split { display: grid; gap: clamp(1.75rem, 4vw, 3rem); }
   @media (min-width: 52rem) { .split { grid-template-columns: 1fr 1fr; } }
@@ -321,7 +323,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Ver â€” home">
+    <a class="brand" href="#top" aria-label="Ver — home">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
         <path d="M4 5.5 12 19l8-13.5M8 5.5l4 7 4-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
@@ -329,7 +331,8 @@
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="#about">About</a>
-      <a href="#craft">Craft</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#stack">Stack</a>
       <a href="#work">Work</a>
       <a class="nav-cta" href="#contact">Contact</a>
       <button class="theme-toggle" type="button" id="themeToggle" aria-label="Switch color theme" aria-pressed="false">
@@ -346,9 +349,8 @@
   <section class="hero" id="top" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Available for interesting problems</p>
-        <h1 id="hero-title">I build tools that make agents <span class="grad">ship with evidence</span>.</h1>
-        <p class="lede">Hi, Iâ€™m <strong>Ver</strong> â€” known online as PapaBear. I design agent workflows, zero-build web apps, and developer tooling that stays fast, accessible, and honest about what actually works.</p>
+        <h1 id="hero-title">Healthcare systems that <span class="grad">survive contact</span> with production.</h1>
+        <p class="lede">Hi, I’m <strong>Ver Sangil</strong> — PapaBear911 online. I build hospital information systems, .NET and Angular line-of-business apps, SQL Server data layers, and AI agents that have to show evidence before they claim done.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#work">
             See the work
@@ -370,53 +372,58 @@
     <div class="wrap reveal">
       <div class="section-head">
         <h2 id="about-title">Short version</h2>
-        <p>I care about the gap between â€œit runs on my machineâ€ and â€œsomeone else can verify it shipped.â€</p>
+        <p>I care about the gap between “it runs on my machine” and “someone else can verify it shipped.”</p>
       </div>
       <div class="split">
         <div>
-          <p>Most of my work lives where agents meet real constraints: clinical systems, media pipelines, sports-day scoreboards on a phone. Small teams, no build steps to hide behind, and users who notice when a page is slow.</p>
-          <p>That pushed me toward boring, durable choices â€” native CSS, plain ES modules, checks that fail loudly. Animation is the last layer, never the load-bearing one.</p>
+          <p>Hands-on work across hospital information systems, EMR/EHR and PhilHealth eClaims, .NET and Angular enterprise apps, SQL Server performance, and release branches that have to reconcile across sites. Regulated users, real audit trails, no room for “it should work.”</p>
+          <p>That pushed me toward boring, durable choices — inspect before guessing, fix the root cause, then verify. My AI agents follow the same rule: audit, act, verify, then repeat.</p>
         </div>
         <div class="facts stagger">
-          <div class="fact"><b>4</b><span>years building</span></div>
+          <div class="fact"><b>4</b><span>years on GitHub</span></div>
           <div class="fact"><b>31</b><span>repos and counting</span></div>
-          <div class="fact"><b>0</b><span>runtime deps in my CLI</span></div>
-          <div class="fact"><b>1</b><span>rule: show the evidence</span></div>
+          <div class="fact"><b>0</b><span>runtime deps in VER</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="craft" aria-labelledby="craft-title">
+  <section id="expertise" aria-labelledby="expertise-title">
     <div class="wrap reveal">
       <div class="section-head">
-        <h2 id="craft-title">What I reach for</h2>
-        <p>The stack is deliberately small. Every addition has to earn its bytes.</p>
+        <h2 id="expertise-title">Expertise</h2>
+        <p>Where the work actually happens — regulated systems, enterprise backends, and agents that have to prove themselves.</p>
       </div>
       <div class="cards stagger">
         <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18c-3 0-5-1.5-5-4 0-1.5.5-2.5 1-3.5-.5-.5-1-1-1-2 0-2 1.5-3.5 3.5-3.5.8 0 1.5.3 2 .7C10.5 5 11.2 4.7 12 4.7c2.2 0 3.5 1.3 3.5 3 0 .5 0 1-.2 1.4 1.8.6 3.2 2 3.2 4.2 0 2.6-2 4.7-5 4.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M8 10.5h3m-3 3h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
-          <h3>Semantics and access first</h3>
-          <p>Landmarks, headings, focus order, and <code>prefers-reduced-motion</code> before a single keyframe. If the page fails with CSS off, the animation is decoration, not structure.</p>
-          <div class="meta"><span class="tag">HTML5</span><span class="tag">ARIA</span><span class="tag">WCAG AA</span></div>
+          <h3>Healthcare IT</h3>
+          <p>Hospital information systems, EMR/EHR, PhilHealth eClaims, workflow automation, and regulatory compliance reporting.</p>
+          <div class="meta"><span class="tag">HIS</span><span class="tag">EMR/EHR</span><span class="tag">Compliance</span></div>
         </article>
         <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="4" width="17" height="16" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 9h17M9 9v11" stroke="currentColor" stroke-width="1.7"/></svg></div>
-          <h3>CSS as the animation engine</h3>
-          <p>Grid, custom properties, <code>clamp()</code>, container queries. Transitions on transform and opacity keep the compositor busy and the main thread free.</p>
-          <div class="meta"><span class="tag">Grid</span><span class="tag">Container queries</span><span class="tag">GPU-friendly</span></div>
+          <h3>Full-stack .NET</h3>
+          <p>C# and ASP.NET Web API backends with Angular frontends. REST design, enterprise architecture, legacy modernization.</p>
+          <div class="meta"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">Angular</span></div>
         </article>
         <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 17V9m5 8V5m5 12v-6m5 6V7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
-          <h3>Evidence over vibes</h3>
-          <p>Observable outcomes, executed checks, rollback notes. VER encodes that loop so an agent canâ€™t claim green without showing output.</p>
-          <div class="meta"><span class="tag">Node.js</span><span class="tag">AGENTS.md</span><span class="tag">CI</span></div>
+          <h3>Data engineering</h3>
+          <p>SQL Server 2014 and 2022, T-SQL, stored procedures, query plans, index analysis, and custom migration systems.</p>
+          <div class="meta"><span class="tag">T-SQL</span><span class="tag">Indexes</span><span class="tag">Migrations</span></div>
         </article>
         <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
-          <h3>Speed as a feature</h3>
-          <p>Lazy media, responsive images, subset fonts, no layout thrash. A hero that animates in 300 ms and scores green on Core Web Vitals.</p>
-          <div class="meta"><span class="tag">WebP</span><span class="tag">CWV</span><span class="tag">LCP</span></div>
+          <h3>AI engineering</h3>
+          <p>MCP, multi-agent orchestration, RAG over repos and docs, local models, and automated code auditing with evidence gates.</p>
+          <div class="meta"><span class="tag">MCP</span><span class="tag">RAG</span><span class="tag">Agents</span></div>
+        </article>
+        <article class="card">
+          <h3>Infrastructure</h3>
+          <p>Windows Server, IIS, Azure Blob Storage, Git workflows, ClickOnce deployment, and production or QA troubleshooting.</p>
+          <div class="meta"><span class="tag">IIS</span><span class="tag">Azure</span><span class="tag">Git</span></div>
+        </article>
+        <article class="card">
+          <h3>Release discipline</h3>
+          <p>Cross-branch reconciliation, release management, and checks that fail loudly instead of quietly shipping a regression.</p>
+          <div class="meta"><span class="tag">Release mgmt</span><span class="tag">Verification</span></div>
         </article>
       </div>
     </div>
@@ -426,30 +433,92 @@
     <div class="wrap reveal">
       <div class="section-head">
         <h2 id="work-title">Selected work</h2>
-        <p>Public, runnable, and small enough to read in one sitting.</p>
+        <p>Public repos you can read in one sitting, plus the systems I run at work.</p>
       </div>
       <div class="work-list stagger">
         <a class="work-item" href="https://github.com/PapaBear911/VER" rel="noopener">
-          <h3>VER â€” Visualize Â· Engineer Â· Release <span class="stars">MIT</span></h3>
+          <h3>VER — Visualize · Engineer · Release <span class="stars">Public · MIT</span></h3>
           <p>A three-phase agent loop with hard evidence gates, delivered as one <code>AGENTS.md</code> plus an installer CLI with zero third-party runtime dependencies.</p>
           <div class="meta"><span class="tag">JavaScript</span><span class="tag">Agent workflow</span><span class="tag">Node 18+</span></div>
         </a>
         <a class="work-item" href="https://github.com/PapaBear911/OpenTeamQueue" rel="noopener">
-          <h3>OpenTeamQueue <span class="stars">Badminton Â· Pickleball Â· Tennis</span></h3>
-          <p>Zero-build queue randomizer, live scoreboard, and tournament manager. Single-file architecture, offline-first, state in <code>localStorage</code>.</p>
+          <h3>OpenTeamQueue <span class="stars">Public</span></h3>
+          <p>Zero-build queue randomizer, live scoreboard, and tournament manager for badminton, pickleball, and tennis. Single-file, offline-first, state in <code>localStorage</code>.</p>
           <div class="meta"><span class="tag">HTML</span><span class="tag">Vanilla JS</span><span class="tag">Offline</span></div>
         </a>
+        <article class="work-item">
+          <h3>MEDIX-MCP <span class="stars">Work · Featured</span></h3>
+          <p>A headless engineering knowledge and repository intelligence platform connecting AI agents to source code, SQL databases, Git repos, and technical documentation.</p>
+          <div class="meta"><span class="tag">MCP</span><span class="tag">Repository intelligence</span><span class="tag">AI agents</span></div>
+        </article>
+        <article class="work-item">
+          <h3>SENTINEL <span class="stars">Work</span></h3>
+          <p>Evidence-driven engineering audit and verification agent: investigate the issue, find the root cause, apply the smallest safe correction, then verify the result.</p>
+          <div class="meta"><span class="tag">Multi-agent</span><span class="tag">RAG</span><span class="tag">Code auditing</span></div>
+        </article>
+        <article class="work-item">
+          <h3>HIS modernization <span class="stars">Work</span></h3>
+          <p>Reconciling legacy Medix applications with the unified HIS2 architecture — backend, frontend, database, and release-branch consistency across sites.</p>
+          <div class="meta"><span class="tag">SQL Server</span><span class="tag">.NET</span><span class="tag">Angular</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack" aria-labelledby="stack-title">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 id="stack-title">Technology stack</h2>
+        <p>Tools I have shipped with, not a logo wall.</p>
+      </div>
+      <div class="stack-grid stagger">
+        <div class="stack-group">
+          <h3>Backend</h3>
+          <ul class="stack-list">
+            <li>C#</li>
+            <li>.NET / ASP.NET</li>
+            <li>ASP.NET Web API</li>
+            <li>RESTful APIs</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Frontend</h3>
+          <ul class="stack-list">
+            <li>Angular</li>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>HTML5 / CSS</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>Data</h3>
+          <ul class="stack-list">
+            <li>SQL Server 2014</li>
+            <li>SQL Server 2022</li>
+            <li>T-SQL</li>
+            <li>Query optimization</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h3>AI and ops</h3>
+          <ul class="stack-list">
+            <li>MCP / RAG</li>
+            <li>Ollama, Qwen, Llama</li>
+            <li>Git / PowerShell</li>
+            <li>Windows Server / IIS</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="contact" id="contact" aria-labelledby="contact-title">
     <div class="wrap reveal">
-      <h2 id="contact-title">Have something that must work the first time?</h2>
-      <p>Agent pipelines, accessibility rescues, or a page that has to load fast on a five-year-old phone. Iâ€™m easiest to reach on GitHub.</p>
+      <h2 id="contact-title">Have something that has to work the first time?</h2>
+      <p>Hospital workflows, legacy .NET that needs rescuing, a SQL Server that fell over, or agents that keep lying about being done.</p>
       <div class="actions" style="justify-content:center">
-        <a class="btn btn-primary" href="https://github.com/PapaBear911" rel="me noopener">Open a discussion on GitHub</a>
-        <a class="btn btn-ghost" href="https://github.com/PapaBear911/VER/issues" rel="noopener">Read the VER rules</a>
+        <a class="btn btn-primary" href="https://github.com/PapaBear911" rel="me noopener">Find me on GitHub</a>
+        <a class="btn btn-ghost" href="https://github.com/PapaBear911/VER" rel="noopener">Read the VER rules</a>
       </div>
     </div>
   </section>
@@ -457,7 +526,7 @@
 
 <footer>
   <div class="wrap">
-    <p>Â© <span id="year">2026</span> Ver Sangil. Built with semantic HTML, native CSS, and about 40 lines of JavaScript.</p>
+    <p>© <span id="year">2026</span> Ver Sangil · PapaBear911 — audit, act, persist, repeat.</p>
     <nav aria-label="Elsewhere">
       <a href="https://github.com/PapaBear911" rel="me noopener">GitHub</a>
       <a href="https://github.com/PapaBear911/VER" rel="noopener">VER</a>
@@ -467,7 +536,7 @@
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Ver Sangil","alternateName":"PapaBear","url":"https://papabear911.github.io/","image":"https://avatars.githubusercontent.com/u/108722772?v=4","sameAs":["https://github.com/PapaBear911"],"jobTitle":"Software Engineer","knowsAbout":["Agent workflows","Accessibility","Frontend performance","Node.js"]}
+{"@context":"https://schema.org","@type":"Person","name":"Ver Sangil","alternateName":"PapaBear","url":"https://papabear911.github.io/","image":"https://avatars.githubusercontent.com/u/108722772?v=4","sameAs":["https://github.com/PapaBear911"],"jobTitle":"Software Engineer","knowsAbout":["Healthcare information systems","C# and .NET","Angular","SQL Server","AI agents and MCP","Accessibility"]}
 </script>
 
 <script>
@@ -504,7 +573,11 @@
       entry.target.classList.add('is-visible');
       io.unobserve(entry.target);
     }
-    // sweep: sections skipped by an anchor jump are already above the viewport
+    sweep();
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+
+  // sections skipped by an anchor jump or a restored scroll position
+  const sweep = () => {
     for (const el of items) {
       if (el.classList.contains('is-visible')) continue;
       if (el.getBoundingClientRect().top < innerHeight) {
@@ -512,7 +585,10 @@
         io.unobserve(el);
       }
     }
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  };
+
+  items.forEach((el) => io.observe(el));
+  sweep();
   items.forEach((el) => io.observe(el));
 })();
 </script>
